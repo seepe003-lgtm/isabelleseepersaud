@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Isabelle Seepersaud - Home</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/template.css">
+    <style>
+        :root{--accent:#2d3748;--muted:#718096;--light:#ffffff}
+        body{font-family:'Inter','Segoe UI',sans-serif;margin:0;background:#ffffff;color:#2d3748;line-height:1.6}
+        header{background:#ffffff;border-bottom:2px solid #e2e8f0;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(45,55,72,0.05)}
+        nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+        nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0}
+        nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:0.95rem;transition:all 0.3s;position:relative}
+        nav a:hover{color:var(--accent);transform:translateY(-2px)}
+        nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg, var(--accent), #e2e8f0);transition:width 0.3s}
+        nav a:hover::after{width:100%}
+        .contact-btn{border:1.5px solid var(--accent) !important;padding:10px 24px !important;background:transparent !important;color:var(--accent) !important;font-weight:600 !important;border-radius:4px !important;position:relative !important}
+        .contact-btn::after{display:none !important}
+        .contact-btn:hover{background:var(--accent) !important;color:#ffffff !important;transform:translateY(0) !important}
+        .brand a{font-size:1.4rem;font-weight:bold;color:var(--accent) !important;letter-spacing:0.5px;transition:all 0.3s}
+        .brand a:hover{transform:scale(1.05)}
+        .container{max-width:900px;margin:0 auto;padding:60px 20px}
+        .hero{display:block;text-align:center;margin-bottom:60px}
+        .hero h1{font-size:3.5rem;font-weight:bold;letter-spacing:-0.5px;margin:0 0 16px;background:linear-gradient(135deg, var(--accent), #718096);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+        .hero p{color:var(--muted);margin:0 0 24px;font-size:1.1rem;line-height:1.7;font-weight:500}
+        .portrait{width:280px;height:280px;border-radius:50%;box-shadow:0 12px 32px rgba(45,55,72,0.2);border:4px solid var(--accent);transition:all 0.3s}
+        .portrait:hover{transform:scale(1.05) translateY(-8px)}
+        .welcome {display:flex;gap:48px;align-items:flex-start;justify-content:center;flex-wrap:wrap;margin:60px 0;padding:32px;border-radius:8px;background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);border-left:4px solid var(--accent)}
+        .headshot {flex:0 0 280px;text-align:center}
+        .headshot img{width:280px;height:280px;object-fit:cover;border-radius:50%;display:block;margin:0 auto;box-shadow:0 12px 32px rgba(45,55,72,0.2);border:4px solid var(--accent);transition:all 0.3s}
+        .headshot:hover img{transform:scale(1.05) translateY(-8px)}
+        .intro {max-width:520px;text-align:left;color:#4a5568;line-height:1.9}
+        .intro h2{margin-top:0;color:var(--accent);font-size:1.5rem;font-weight:bold;letter-spacing:0.3px;position:relative}
+        .intro h2::before{content:'';position:absolute;left:-20px;top:50%;transform:translateY(-50%);width:4px;height:24px;background:linear-gradient(180deg, var(--accent), #718096);border-radius:2px}
+        .intro p{font-size:0.98rem;color:#4a5568}
+        .video-wrapper{max-width:720px;margin:60px auto;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+        .video-wrapper video{width:100%;display:block}
+        .hobbies{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin:60px 0}
+        .hobby{background:#ffffff;padding:28px 24px;border-radius:8px;max-width:320px;border:2px solid #e2e8f0;box-shadow:0 4px 12px rgba(45,55,72,0.08);text-align:left;display:flex;flex-direction:column;transition:all 0.3s}
+        .hobby:hover{border-color:var(--accent);box-shadow:0 16px 32px rgba(45,55,72,0.15);transform:translateY(-8px)}
+        .hobby-image{width:100%;height:200px;background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:16px;transition:transform 0.3s}
+        .hobby:hover .hobby-image{transform:scale(1.05)}
+        .hobby img{width:100%;height:100%;object-fit:contain;padding:12px;box-sizing:border-box}
+        .hobby h3{margin:0 0 10px;color:var(--accent);font-size:1.1rem;font-weight:bold;letter-spacing:0.3px}
+        .hobby p{margin:0;color:#4a5568;flex:1;font-size:0.95rem;line-height:1.7}
+        .hobby a{color:var(--accent);text-decoration:none;font-weight:600;font-size:0.9rem;margin-top:14px;transition:all 0.3s;display:inline-flex;align-items:center;gap:4px}
+        .hobby a:hover{color:#1557a0;transform:translateX(4px)}
+        footer{max-width:900px;margin:80px auto;padding:32px 20px;color:#a0aec0;font-size:0.9rem;text-align:center;border-top:2px solid #e2e8f0;position:relative}
+        footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+        @media (max-width:600px){.hero h1{font-size:1.6rem}}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">Isabelle Seepersaud</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="discover.html">Discover UMD</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" style="border-bottom:none;padding-top:60px">
+            <h1>Hi — I'm Isabelle Seepersaud</h1>
+            <p>Explore my projects, hobbies, and career information. Use the navigation above to get started.</p>
+        </section>
+
+        <!-- Portrait + Intro -->
+        <section class="portrait-section" aria-labelledby="welcome-heading">
+            <div class="headshot">
+                <picture>
+                    <source srcset="images/IMG_4250.JPG" type="image/jpeg">
+                    <img src="images/IMG_4250.JPG" alt="Headshot of Isabelle Seepersaud" class="portrait-circle" loading="lazy">
+                </picture>
+                <figcaption style="color:#666;font-size:0.9rem;margin-top:8px">Isabelle Seepersaud</figcaption>
+            </div>
+
+            <div class="portrait-text">
+                <h2 id="welcome-heading">Welcome</h2>
+                <p>Hello — I'm Isabelle Seepersaud. I am a motivated Business student majoring in Marketing at the University of Minnesota Duluth, passionate about brand strategy, experiential marketing, and consumer engagement. Through my involvement in campus organizations and my role as a Residential Advisor, I've developed strengths in communication, community-building, problem-solving, and leadership.<br><br>I enjoy opportunities that challenge me to think creatively, connect with diverse audiences, and help brands build memorable experiences. I'm actively growing my professional network and exploring internships that allow me to apply data-driven insights, event activation, and brand development in real-world environments. I'm studying marketing. On this site you'll find my projects, hobbies, and resume — thanks for visiting.</p>
+            </div>
+        </section>
+
+        <!-- Welcome video (30-60s placeholder) -->
+        <div class="section" style="padding-top:40px;padding-bottom:40px">
+            <video controls poster="" style="width:100%;max-width:720px;border-radius:8px;display:block;margin:12px auto" aria-label="Welcome video">
+                <source src="welcome.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p style="text-align:center;color:#666;margin-top:6px">Welcome video (30–60 seconds) — place your recording at <code>media/welcome.mp4</code> or update the source.</p>
+        </div>
+
+        <!-- Two hobby summaries -->
+        <section class="hobbies" aria-label="Hobbies">
+            <article class="hobby">
+                <a href="hobbies.html">
+                    <div class="hobby-image">
+                        <img src="images/wagsimage.png" alt="Wags & Whiskers Animal Rescue of Minnesota logo featuring a smiling dog and cat with a pink heart between them" onerror="this.src='images/mypic.svg'">
+                    </div>
+                </a>
+                <h3><a href="hobbies.html" style="text-decoration:none;color:inherit">Fostering Rescue Dogs</a></h3>
+                <p>involved supporting animal welfare through fostering dogs, assisting with adoption and fundraising events, and contributing over 100 volunteer hours. The experience developed teamwork, responsibility, compassion, and leadership while making a meaningful impact in the community.</p>
+                <p><a href="hobbies.html">Read more →</a></p>
+            </article>
+
+            <article class="hobby">
+                <a href="hobbies.html">
+                    <div class="hobby-image">
+                        <img src="images/woman.jpg" alt="Woman in business" onerror="this.src='images/mypic.svg'">
+                    </div>
+                </a>
+                <h3><a href="hobbies.html" style="text-decoration:none;color:inherit">Woman in business</a></h3>
+                <p>Women in Business is an initiative designed to empower women in professional environments. It helps me build networks, develop communication and leadership skills, gain confidence in self-advocacy, and refine business etiquette. Through workshops, discussions, and networking events, the program supports women in becoming confident, capable leaders and innovators in their careers.</p>
+                <p><a href="hobbies.html">Read more →</a></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
+    </footer>
+
+    <script>
+       
+    </script>
+</body>
+</html>
