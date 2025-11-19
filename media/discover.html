@@ -1,70 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Isabelle Seepersaud - Discover UMD</title>
-    <link rel="stylesheet" href="../CSS/template.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Discover UMD — Isabelle Seepersaud</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/template.css">
+  <style>
+    :root{--accent:#2d3748;--muted:#718096;--light:#ffffff}
+    body{font-family:'Inter','Segoe UI',sans-serif;margin:0;background:#ffffff;color:#2d3748;line-height:1.6}
+    header{background:#ffffff;border-bottom:2px solid #e2e8f0;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(45,55,72,0.05)}
+    nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+    nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:0.95rem;transition:all 0.3s;position:relative}
+    nav a:hover{color:var(--accent);transform:translateY(-2px)}
+    nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg, var(--accent), #e2e8f0);transition:width 0.3s}
+    nav a:hover::after{width:100%}
+    .brand a{font-size:1.3rem;font-weight:800;color:var(--accent) !important}
+    .container{max-width:900px;margin:0 auto;padding:60px 20px}
+    .hero{margin-bottom:36px}
+    .hero h1{color:var(--accent);margin:0 0 12px;font-size:2.8rem;font-weight:900}
+    .hero p{color:var(--muted);line-height:1.8;font-size:1.05rem}
+    .section{background:#ffffff;padding:28px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:28px;border-left:4px solid var(--accent);transition:all 0.3s}
+    .section:hover{box-shadow:0 12px 28px rgba(45,55,72,0.15);transform:translateX(4px)}
+    .section h2{color:var(--accent);margin-top:0;font-size:1.4rem;font-weight:700}
+    .flex{display:flex;gap:32px;align-items:flex-start}
+    .poster{flex:0 0 340px;height:280px;background:#f9f9f9;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .poster img{width:100%;height:100%;object-fit:contain;padding:12px;box-sizing:border-box;border-radius:12px}
+    .content{flex:1}
+    .content p{color:#4a5568;line-height:1.8;font-size:0.98rem}
+    .content ul{color:#4a5568;line-height:1.9;margin:12px 0}
+    .video{max-width:720px;margin:20px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+    footer{text-align:center;padding:32px 20px;color:#a0aec0;margin-top:40px;border-top:2px solid #e2e8f0;position:relative}
+    footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+    @media(max-width:800px){.flex{flex-direction:column}.poster{flex:unset;width:100%;height:280px}}
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="brand">Isabelle Seepersaud</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="discover.html">Discover UMD</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="game.html">Game</a></li>
+  <header>
+    <nav>
+      <a href="index.html" class="brand">Isabelle Seepersaud</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="discover.html">Discover UMD</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="game.html">Game</a></li>
         <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="section">
-            <h1 class="section-title">Discover UMD</h1>
-            <p>Explore the University of Minnesota Duluth and the beautiful city of Duluth through my perspective as a student.</p>
-        </section>
+  <main>
+    <section class="section" style="border-bottom:none;padding-bottom:24px">
+      <h1>Discover University of Minnesota Duluth (UMD)</h1>
+      <p>Learn why I chose UMD, what I love about Duluth and the surrounding area, and some personal campus highlights.</p>
+    </section>
 
-        <section class="section">
-            <div class="grid-2">
-                <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/umd.png" alt="UMD campus" onerror="this.src='images/mypic.svg'">
-                    </div>
-                    <div class="feature-content">
-                        <h3>University of Minnesota Duluth</h3>
-                        <p>UMD offers a world-class education with a close-knit campus community. The Labovitz School of Business & Economics provides excellent opportunities for marketing students with hands-on learning experiences, internship programs, and connections to regional businesses.</p>
-                        <p>The campus combines modern facilities with beautiful natural surroundings, creating an inspiring environment for learning and personal growth.</p>
-                    </div>
-                </div>
+    <section class="section">
+      <h2>Why I chose University of Minnesota Duluth</h2>
+      <div class="flex">
+        <div class="poster">
+          <img src="images/umd.png" alt="UMD campus" onerror="this.src='images/mypic.svg'">
+        </div>
+        <div class="content">
+          <p>I chose UMD because of its strong programs in business,, the smaller campus community that supports meaningful faculty connections, and opportunities for hands-on projects and internships. The balance between strong academics and a welcoming campus culture made it the right fit for me.</p>
+          <ul>
+            <li>Smaller class sizes and accessible faculty</li>
+            <li>Strong experiential learning and internship pipeline</li>
+            <li>Close-knit student community and active student organizations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-                <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/duluth.jpg" alt="Duluth lakeshore" onerror="this.src='images/mypic.svg'">
-                    </div>
-                    <div class="feature-content">
-                        <h3>City of Duluth</h3>
-                        <p>Duluth is a vibrant city situated on the shores of Lake Superior. Known for its stunning natural beauty, outdoor recreation opportunities, and rich cultural scene, it's the perfect place to balance academic life with adventure.</p>
-                        <p>From hiking trails to local businesses, Duluth offers countless opportunities to explore, learn, and grow both personally and professionally.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="section">
+      <h2>What I like about Duluth & the surrounding area</h2>
+      <div class="flex">
+        <div class="content">
+          <p>Duluth sits on the shores of Lake Superior — the outdoor opportunities are incredible. I love that I can go hiking, kayaking, or just walk along the lake after classes. The city has a lively arts scene, local cafes, and community events that make it feel like home.</p>
+          <ul>
+            <li>Lake Superior shoreline and lakeside trails</li>
+            <li>Local shops, restaurants, and community events</li>
+            <li>Year-round outdoor recreation (hiking, skiing, kayaking)</li>
+          </ul>
+        </div>
+        <div class="poster">
+          <img src="images/duluth.jpg" alt="Duluth lakeshore" onerror="this.src='images/mypic.svg'">
+        </div>
+      </div>
+    </section>
 
-        <section class="section">
-            <video controls style="width:100%;max-width:720px;border-radius:8px;display:block;margin:0 auto" aria-label="Discover UMD video">
-                <source src="discover.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p style="text-align:center;color:#666;margin-top:16px">Discover UMD - A video tour of campus and the Duluth area</p>
-        </section>
-    </main>
+    <section class="section">
+      <h2>UMD Marketing Video (30 seconds)</h2>
+      <div class="video">
+        <video controls playsinline preload="metadata" poster="images/duluth.jpg" style="width:100%;border-radius:8px" aria-label="UMD marketing video">
+          <source src="discover.mp4" type="video/mp4">
+          <p>Your browser does not support the video tag. <a href="discover.mp4">Download the video</a>.</p>
+        </video>
+        <p style="color:#666;margin-top:8px">G</p>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
-    </footer>
+    <section class="section">
+      <h2>Personal Experiences & Campus Highlights</h2>
+      <p>During my time at UMD I've participated in student organizations, worked on team projects, and taken advantage of experiences that expanded my skills. A few highlights:</p>
+      <ul>
+        <li>Worked on a semester-long marketing project for Minnesuing Acres.</li>
+        <li>Volunteered at Engager Tower.</li>
+        <li>Participated in a case competition for a local business.</li>
+      </ul>
+      <p>These experiences gave me practical skills and memorable connections — both academically and socially — that shaped my college experience.</p>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <p><a class="card-link" href="index.html">← Back to home</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Isabelle Seepersaud</p>
+  </footer>
 </body>
 </html>

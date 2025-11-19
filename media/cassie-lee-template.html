@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title - Isabelle Seepersaud</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #ffffff;
+            padding: 24px 60px;
+            border-bottom: none;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .brand {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0px;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            transition: all 0.3s;
+            opacity: 0.7;
+        }
+        
+        nav a:hover {
+            opacity: 1;
+        }
+        
+        .contact-btn {
+            border: 1px solid #1a1a1a;
+            padding: 10px 26px;
+            background: transparent;
+            color: #1a1a1a;
+            font-weight: 400;
+            cursor: pointer;
+            letter-spacing: 0px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        main {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* ===== HERO SECTION WITH SIDE IMAGE ===== */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+            align-items: stretch;
+            background: #ffffff;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 60px;
+            background: #ffffff;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text-box {
+            max-width: 500px;
+        }
+        
+        .hero-text-box h1 {
+            font-size: 3.8rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+            line-height: 1;
+            color: #1a1a1a;
+        }
+        
+        .hero-text-box p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+        }
+        
+        .hero-btn {
+            border: 1px solid #1a1a1a;
+            padding: 12px 28px;
+            background: transparent;
+            color: #1a1a1a;
+            font-weight: 400;
+            cursor: pointer;
+            letter-spacing: 0px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .hero-btn:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s;
+        }
+        
+        .hero-image:hover img {
+            filter: grayscale(30%);
+        }
+        
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 100px 60px;
+            border-bottom: 1px solid #f0f0f0;
+            background: #ffffff;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            letter-spacing: -0.6px;
+            color: #1a1a1a;
+        }
+        
+        /* ===== TWO COLUMN ===== */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .text-content h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 28px;
+            letter-spacing: -0.4px;
+        }
+        
+        .text-content p {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+        
+        .text-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .text-content li {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            padding: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .text-content li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+        }
+        
+        .image-col {
+            position: relative;
+        }
+        
+        .image-col img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.4s, transform 0.4s;
+        }
+        
+        .image-col:hover img {
+            filter: grayscale(30%);
+            transform: scale(1.02);
+        }
+        
+        /* ===== GRID LAYOUTS ===== */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .card {
+            padding: 0;
+            background: transparent;
+            border: none;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 300px;
+            background: #f5f5f5;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s, transform 0.4s;
+        }
+        
+        .card:hover .card-image img {
+            filter: grayscale(40%);
+            transform: scale(1.03);
+        }
+        
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+        
+        .card p {
+            font-size: 0.9rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .card-link {
+            display: inline-block;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            transition: transform 0.3s;
+        }
+        
+        .card-link:hover {
+            transform: translateX(6px);
+        }
+        
+        /* ===== FEATURE CARDS ===== */
+        .feature-card {
+            display: flex;
+            gap: 50px;
+            padding: 50px 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: start;
+        }
+        
+        .feature-card:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-image {
+            width: 280px;
+            height: 280px;
+            background: #f5f5f5;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s, transform 0.4s;
+        }
+        
+        .feature-card:hover .feature-image img {
+            filter: grayscale(30%);
+            transform: scale(1.05);
+        }
+        
+        .feature-text h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+        
+        .feature-text p {
+            color: #4a4a4a;
+            line-height: 1.9;
+            margin-bottom: 16px;
+            max-width: 600px;
+            font-size: 0.95rem;
+        }
+        
+        /* ===== PORTRAIT SECTION ===== */
+        .portrait-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+            align-items: center;
+        }
+        
+        .portrait-text {
+            padding: 60px;
+            background: #ffffff;
+            z-index: 2;
+        }
+        
+        .portrait-text h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 24px;
+            letter-spacing: -0.6px;
+        }
+        
+        .portrait-text p {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: 16px;
+            max-width: 500px;
+        }
+        
+        .portrait-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05));
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .portrait-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #e8e8e8;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 40px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 50px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 0 1px #e8e8e8;
+        }
+        
+        .timeline-year {
+            font-size: 0.75rem;
+            color: #8a8a8a;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+        
+        .timeline-item p {
+            color: #4a4a4a;
+            line-height: 1.8;
+            max-width: 700px;
+            font-size: 0.95rem;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 70vh;
+            align-items: stretch;
+            background: #ffffff;
+        }
+        
+        .cta-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 60px;
+            background: #ffffff;
+        }
+        
+        .cta-text-box {
+            max-width: 500px;
+        }
+        
+        .cta-text-box h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.6px;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+        
+        .cta-text-box p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            border: 1px solid #1a1a1a;
+            padding: 12px 28px;
+            background: #1a1a1a;
+            color: #ffffff;
+            font-weight: 400;
+            cursor: pointer;
+            letter-spacing: 0px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: #1a1a1a;
+        }
+        
+        .cta-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+            overflow: hidden;
+        }
+        
+        .cta-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s;
+        }
+        
+        .cta-image:hover img {
+            filter: grayscale(30%);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 50px 60px;
+            text-align: center;
+            color: #8a8a8a;
+            font-size: 0.85rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-split,
+            .portrait-hero,
+            .cta-split {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+            
+            .section {
+                padding: 60px 40px;
+            }
+            
+            .hero-content {
+                padding: 60px 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 20px;
+            }
+            
+            nav ul {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            
+            .hero-content,
+            .cta-content {
+                padding: 40px 20px;
+            }
+            
+            .hero-text-box h1,
+            .cta-text-box h2,
+            .portrait-text h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 40px 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .portrait-text {
+                padding: 40px 20px;
+            }
+            
+            .feature-card {
+                flex-direction: column;
+                gap: 24px;
+                padding: 32px 0;
+            }
+            
+            .feature-image {
+                width: 100%;
+                height: 240px;
+            }
+            
+            .contact-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../media/index.html" class="brand">Isabelle Seepersaud</a>
+            <ul>
+                <li><a href="../media/index.html">Home</a></li>
+                <li><a href="../media/hobbies.html">Hobbies</a></li>
+                <li><a href="../media/discover.html">Discover UMD</a></li>
+                <li><a href="../media/resume.html">Resume</a></li>
+                <li><a href="../media/career.html">Career</a></li>
+                <li><a href="../media/game.html">Game</a></li>
+                <li><button class="contact-btn">Contact Me</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO SPLIT SECTION ===== -->
+        <section class="hero-split">
+            <div class="hero-content">
+                <div class="hero-text-box">
+                    <h1>Isabelle Seepersaud</h1>
+                    <p>Welcome to my portfolio. I specialize in marketing strategy, brand development, and creating meaningful connections between brands and audiences. Let's work together to bring your vision to life.</p>
+                    <a href="#" class="hero-btn">Read More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=900&fit=crop" alt="Hero Image">
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="two-col">
+                <div class="text-content">
+                    <h3>Marketing Student & Brand Enthusiast</h3>
+                    <p>I'm a motivated Business student at the University of Minnesota Duluth, majoring in Marketing. Through my involvement in campus organizations and my role as a Residential Advisor, I've developed strong communication and leadership skills.</p>
+                    <p>I'm passionate about brand strategy, consumer engagement, and creating memorable experiences that resonate with audiences.</p>
+                    <ul>
+                        <li>Brand Strategy & Development</li>
+                        <li>Experiential Marketing</li>
+                        <li>Event Planning & Activation</li>
+                        <li>Community Building</li>
+                    </ul>
+                </div>
+                <div class="image-col">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=700&fit=crop" alt="About">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED WORK ===== -->
+        <section class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="Project">
+                    </div>
+                    <h3>Marketing Campaign</h3>
+                    <p>A comprehensive brand campaign that increased engagement by 45% through targeted messaging and audience insights.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop" alt="Project">
+                    </div>
+                    <h3>Brand Strategy</h3>
+                    <p>Strategic positioning initiative that redefined market presence through competitor analysis and consumer research.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-adf4198c868f?w=500&h=300&fit=crop" alt="Project">
+                    </div>
+                    <h3>Event Activation</h3>
+                    <p>Experiential marketing event that brought brand to life and created memorable experiences for 500+ attendees.</p>
+                    <a href="#" class="card-link">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== INTERESTS SECTION ===== -->
+        <section class="section">
+            <h2 class="section-title">My Interests</h2>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1522070132519-b44b92b5b06b?w=400&h=400&fit=crop" alt="Interest">
+                </div>
+                <div class="feature-text">
+                    <h3>Brand Strategy</h3>
+                    <p>I'm passionate about helping brands find their unique voice and positioning in the market. Understanding consumer psychology and market trends drives my strategic approach to brand development and differentiation.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=400&h=400&fit=crop" alt="Interest">
+                </div>
+                <div class="feature-text">
+                    <h3>Experiential Marketing</h3>
+                    <p>Creating meaningful events and experiences that connect people to brands on a deeper level. I love designing activations that generate genuine engagement and lasting impressions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTRAIT HERO SECTION ===== -->
+        <section class="portrait-hero">
+            <div class="portrait-text">
+                <h2>My Approach</h2>
+                <p>I believe in strategic thinking combined with creative execution. Every project starts with deep research and understanding the core values and goals of the brand.</p>
+                <p>My methodology focuses on creating authentic connections through compelling storytelling and innovative activations that resonate with target audiences.</p>
+            </div>
+            <div class="portrait-image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=700&fit=crop" alt="Approach">
+            </div>
+        </section>
+
+        <!-- ===== TIMELINE/EXPERIENCE ===== -->
+        <section class="section">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 - Present</div>
+                    <h3>Senior Marketing Student</h3>
+                    <p>Focusing on capstone projects and real-world marketing applications. Leading campus marketing initiatives as a Residential Advisor.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023 - 2024</div>
+                    <h3>Marketing Intern</h3>
+                    <p>Supported marketing campaigns and brand development projects. Gained hands-on experience in event planning and social media strategy.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022 - 2023</div>
+                    <h3>Campus Involvement Lead</h3>
+                    <p>Organized and executed campus events and marketing initiatives. Developed communication strategies for student engagement.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021 - 2022</div>
+                    <h3>Business Student</h3>
+                    <p>Began pursuing marketing degree at University of Minnesota Duluth. Discovered passion for brand strategy and consumer psychology.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA SPLIT SECTION ===== -->
+        <section class="cta-split">
+            <div class="cta-content">
+                <div class="cta-text-box">
+                    <h2>Let's Connect</h2>
+                    <p>I'm always interested in discussing new opportunities, collaborations, and ideas. Whether you want to chat about marketing strategy or just say hello—I'd love to hear from you.</p>
+                    <a href="mailto:contact@example.com" class="cta-button">Get In Touch</a>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=700&fit=crop" alt="Contact">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved. | Crafted with purpose.</p>
+    </footer>
+</body>
+</html>

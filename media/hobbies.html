@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Isabelle Seepersaud - Hobbies</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Hobbies — Isabelle Seepersaud</title>
+	<link rel="stylesheet" href="../CSS/styles.css">
 	<link rel="stylesheet" href="../CSS/template.css">
+	<style>
+		:root{--accent:#2d3748;--muted:#718096}
+		body{font-family:'Inter','Segoe UI',sans-serif;margin:0;background:#ffffff;color:#2d3748}
+		header{background:#ffffff;border-bottom:2px solid #e2e8f0;box-shadow:0 2px 4px rgba(45,55,72,0.05)}
+		nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+		nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0}
+		nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:0.95rem;transition:all 0.3s;position:relative}
+		nav a:hover{color:var(--accent);transform:translateY(-2px)}
+		nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg, var(--accent), #e2e8f0);transition:width 0.3s}
+		nav a:hover::after{width:100%}
+		.container{max-width:900px;margin:36px auto;padding:20px}
+		h1{color:var(--accent);margin:0 0 12px;font-size:2.4rem;font-weight:800}
+		p{color:#4a5568;line-height:1.8}
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+		.card{background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(45,55,72,0.05);overflow:hidden;transition:all 0.3s;display:flex;flex-direction:column;height:100%}
+		.card:hover{box-shadow:0 12px 28px rgba(45,55,72,0.15);transform:translateY(-6px);border-color:var(--accent)}
+		.card-image{width:100%;height:250px;background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:transform 0.3s}
+		.card:hover .card-image{transform:scale(1.05)}
+		.card img{width:100%;height:100%;object-fit:contain;padding:16px;box-sizing:border-box;transition:filter 0.3s}
+		.card:hover img{filter:brightness(1.1)}
+		.card-content{padding:20px;flex:1;display:flex;flex-direction:column}
+		.card h2{margin:0 0 8px;color:var(--accent);font-size:1.2rem;font-weight:700}
+		.card p{margin:0 0 12px;color:#4a5568;font-size:0.95rem;line-height:1.6;flex:1}
+		.card-summary{display:block}
+		.card-full{display:none}
+		.card a{color:var(--accent);text-decoration:none;font-weight:600;font-size:0.9rem;transition:color 0.2s}
+		.card a:hover{color:#1a365d}
+		.card a:hover{text-decoration:underline}
+		.back{display:inline-block;margin-top:24px;color:var(--accent);text-decoration:none;font-weight:600;transition:all 0.3s;position:relative}
+		.back::before{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:linear-gradient(90deg, var(--accent), transparent);transition:width 0.3s}
+		.back:hover{color:#1a365d;transform:translateX(8px)}
+		.back:hover::before{width:100%}
+		footer{text-align:center;padding:18px 0;color:#a0aec0;border-top:2px solid #e2e8f0;position:relative;margin-top:36px}
+		footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+	</style>
 </head>
 <body>
 	<header>
@@ -23,51 +59,112 @@
 	</header>
 
 	<main>
-		<section class="section">
-			<h1 class="section-title">My Hobbies & Activities</h1>
-			<p>Here are some of the activities and interests that shape who I am outside of academics and work.</p>
+		<section class="section" style="border-bottom:none">
+			<h1 class="section-title" style="margin-bottom:16px">My Hobbies</h1>
+			<p>Here are my favorite hobbies</p>
 		</section>
 
 		<section class="section">
-			<div class="grid-2">
-				<div class="card">
+		<div class="grid-2">
+			<article class="card">
+				<div class="card-image">
 					<img src="images/wagsimage.png" alt="Fostering Rescue Dogs" onerror="this.src='images/mypic.svg'">
-					<div class="card-content">
-						<h3>Fostering Rescue Dogs</h3>
-						<p>I volunteer with Wags & Whiskers Animal Rescue of Minnesota, fostering dogs in need of temporary homes. This experience has taught me responsibility, compassion, and the importance of giving back to the community. I've helped socialize and care for dogs preparing for adoption, contributing over 100 volunteer hours to animal welfare.</p>
-					</div>
 				</div>
+				<div class="card-content">
+					<h2>Volunteer – Dog Rescue & Foster Care</h2>
+					<p class="card-summary">A community-driven role dedicated to supporting animal welfare through fostering dogs and volunteering at adoption events.</p>
+					<p class="card-full" style="display:none">A community-driven role dedicated to supporting animal welfare. This experience provided opportunities to:
+ • Foster & Care for dogs in transition, providing safe and nurturing temporary homes.
+ • Support Events by assisting with adoption and fundraising activities.
+ • Contribute Time with over 100 volunteer hours dedicated to rescue efforts.
+ • Build Skills in teamwork, responsibility, and community engagement.
 
-				<div class="card">
+Through hands-on service, this volunteer work fostered compassion, leadership, and a commitment to making a positive impact.</p>
+					<a href="#" onclick="toggleContent(this); return false;">Read More →</a>
+				</div>
+			</article>
+
+			<article class="card">
+				<div class="card-image">
 					<img src="images/ama.png" alt="American Marketing Association logo featuring stylized letters AMA and a right-pointing arrow in white on a dark blue background, representing the organization's forward-thinking approach to marketing education" onerror="this.src='images/mypic.svg'">
-					<div class="card-content">
-						<h3>American Marketing Association</h3>
-						<p>As an active member of the American Marketing Association at UMD, I participate in professional development workshops, networking events, and case study competitions. This involvement helps me stay current with marketing trends and build connections within the industry.</p>
-					</div>
 				</div>
+				<div class="card-content">
+					<h2>American Marketing Association</h2>
+					<p class="card-summary">A student-led organization dedicated to bridging classroom knowledge with real-world marketing experiences and professional development.</p>
+					<p class="card-full" style="display:none">American Marketing Association (AMA) - A student-led organization dedicated to bridging classroom knowledge with real-world marketing experiences. This program provides opportunities to:
+ • Apply Knowledge by engaging in projects, case studies, and professional activities that connect theory to practice.
+ • Develop Professionally through workshops, networking events, and exposure to industry leaders.
+ • Collaborate with like-minded peers who share a passion for marketing and business success.
+ • Build Skills in communication, leadership, creativity, and business strategy.
 
-				<div class="card">
+Through hands-on experiences and professional connections, the American Marketing Association empowers students to grow as leaders and prepare for successful careers in marketing and beyond.</p>
+					<a href="#" onclick="toggleContent(this); return false;">Read More →</a>
+				</div>
+			</article>
+
+			<article class="card">
+				<div class="card-image">
 					<img src="images/um.png" alt="Photography" onerror="this.src='images/mypic.svg'">
-					<div class="card-content">
-						<h3>Photography</h3>
-						<p>Photography allows me to capture and share the beauty I see in everyday moments. Whether it's campus life, nature, or events, I enjoy using visual storytelling to document experiences and express creativity.</p>
-					</div>
 				</div>
+				<div class="card-content">
+					<h2>Housing & Residential Life – UMD Residential Advisor</h2>
+					<p class="card-summary">A student-focused program committed to creating safe, inclusive, and supportive living environments on campus for fellow students.</p>
+					<p class="card-full" style="display:none">A student-focused program committed to creating safe, inclusive, and supportive living environments on campus. This program provides opportunities to:
+ • Build Community through events, initiatives, and peer engagement that foster belonging.
+ • Develop Leadership by serving as role models, mentors, and resources for fellow students.
+ • Promote Well-Being by upholding policies, ensuring safety, and supporting student success.
+ • Enhance Skills in communication, conflict resolution, time management, and teamwork.
 
-				<div class="card">
-					<img src="images/woman.jpg" alt="Reading & Learning" onerror="this.src='images/mypic.svg'">
-					<div class="card-content">
-						<h3>Women in Business</h3>
-						<p>I participate in Women in Business initiatives that focus on empowering women in professional environments. Through workshops, networking events, and mentorship opportunities, I develop leadership skills and connect with other driven women in business.</p>
-					</div>
+Through hands-on experiences in residential communities, Housing & Residential Life empowers students to grow personally and professionally while contributing to the success of their peers.</p>
+					<a href="#" onclick="toggleContent(this); return false;">Read More →</a>
 				</div>
-			</div>
+			</article>
+
+			<article class="card">
+				<div class="card-image">
+					<img src="images/woman.jpg" alt="Reading & Learning" onerror="this.src='images/mypic.svg'">
+				</div>
+				<div class="card-content">
+					<h2>Woman in Business</h2>
+					<p class="card-summary">An initiative focused on exploring and strengthening the role women play in professional settings through networking and skill development.</p>
+					<p class="card-full" style="display:none">An initiative focused on exploring and strengthening the role women play in professional settings. This program provides opportunities to:
+ • Connect with peers and industry professionals to build supportive networks.
+ • Develop strong communication skills to enhance workplace presence and collaboration.
+ • Instill Confidence by practicing strategies for self-advocacy, leadership, and decision-making.
+ • Strengthen Business Etiquette to navigate professional environments with competence and poise.
+
+Through workshops, discussions, and networking opportunities, Women in Business empowers participants to thrive as leaders, innovators, and professionals in their chosen fields.</p>
+					<a href="#" onclick="toggleContent(this); return false;">Read More →</a>
+				</div>
+			</article>
+		</div>
+		</section>
+
+		<section class="section" style="padding-top:0">
+			<p><a class="card-link" href="index.html">← Back to home</a></p>
 		</section>
 	</main>
 
 	<footer>
-		<p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
+		&copy; 2025 Isabelle Seepersaud
 	</footer>
+	<script>
+		function toggleContent(link) {
+			const card = link.closest('.card-content');
+			const summary = card.querySelector('.card-summary');
+			const full = card.querySelector('.card-full');
+			
+			if (full.style.display === 'none') {
+				summary.style.display = 'none';
+				full.style.display = 'block';
+				link.textContent = '← Show Less';
+			} else {
+				summary.style.display = 'block';
+				full.style.display = 'none';
+				link.textContent = 'Read More →';
+			}
+		}
+	</script>
 </body>
 </html>
 

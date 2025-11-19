@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Clean Template</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; color: #1a1a1a; }
+        header { background: #fff; padding: 20px 40px; border-bottom: 1px solid #e9ecef; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.2rem; font-weight: 700; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #495057; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #2563eb; }
+        main { max-width: 1200px; margin: 0 auto; padding: 80px 40px; }
+        .hero { text-align: center; margin-bottom: 80px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 16px; color: #0f172a; }
+        .hero p { font-size: 1.2rem; color: #64748b; margin-bottom: 32px; }
+        .btn { display: inline-block; padding: 12px 32px; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; transition: background 0.3s; border: none; cursor: pointer; font-weight: 600; }
+        .btn:hover { background: #1d4ed8; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin: 80px 0; }
+        .card { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.1); transform: translateY(-4px); }
+        .card h3 { font-size: 1.4rem; margin-bottom: 12px; }
+        .card p { color: #64748b; line-height: 1.6; }
+        .section { padding: 80px 0; border-top: 1px solid #e2e8f0; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 40px; }
+        footer { background: #1e293b; color: white; padding: 40px; text-align: center; margin-top: 80px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="brand">Your Brand</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Modern & Clean</h1>
+            <p>A bright, contemporary design with blue accents and rounded elements</p>
+            <button class="btn">Get Started</button>
+        </section>
+
+        <section class="section">
+            <h2>Featured Projects</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>A modern approach to web design focusing on simplicity and user experience.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Clean interfaces with intuitive navigation and contemporary styling.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <p>Minimalist design philosophy with emphasis on readability and accessibility.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Brand. All rights reserved.</p>
+    </footer>
+</body>
+</html>

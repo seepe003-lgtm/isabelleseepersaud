@@ -1,133 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Isabelle Seepersaud - Career</title>
-    <link rel="stylesheet" href="../CSS/template.css">
-    <style>
-        body {
-            font-size: 13px;
-        }
-        main {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Career Interests — Isabelle Seepersaud</title>
+	<link rel="stylesheet" href="../CSS/styles.css">
+	<link rel="stylesheet" href="../CSS/template.css">
+	<style>
+		:root{--accent:#2d3748;--muted:#718096;--light:#ffffff}
+		body{font-family:'Inter','Segoe UI',sans-serif;margin:0;background:#ffffff;color:#2d3748;line-height:1.6;font-size:13px}
+		header.site-head{background:#ffffff;border-bottom:2px solid #e2e8f0;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(45,55,72,0.05)}
+		nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+		nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0}
+		nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:0.95rem;transition:all 0.3s;position:relative}
+		nav a:hover{color:var(--accent);transform:translateY(-2px)}
+		nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg, var(--accent), #e2e8f0);transition:width 0.3s}
+		nav a:hover::after{width:100%}
+		.brand a{font-size:1.3rem;font-weight:800;color:var(--accent) !important}
+		.container{max-width:1400px;margin:0 auto;padding:60px 20px}
+		.hero{margin-bottom:36px}
+		.hero h1{color:var(--accent);margin:0 0 12px;font-size:2.8rem;font-weight:900}
+		.hero p{color:var(--muted);line-height:1.8;font-size:1.05rem}
+		.company{background:#ffffff;border-radius:8px;padding:28px;margin-bottom:28px;box-shadow:0 4px 12px rgba(0,0,0,0.06);transition:all 0.3s;border-left:4px solid var(--accent)}
+		.company:hover{background:#ffffff;box-shadow:0 16px 32px rgba(45,55,72,0.15);transform:translateY(-6px)}
+		.company-header{display:flex;gap:20px;align-items:flex-start}
+		.company-logo{width:100px;height:100px;object-fit:contain;background:#f9f9f9;padding:12px;border-radius:8px}
+		.company-info,.why-interested,.qualifications{margin-top:18px}
+		.company h2{margin:0;color:var(--accent);font-size:1.35rem;font-weight:700}
+		.company h3{margin:0 0 10px;color:var(--accent);font-weight:700;font-size:1.05rem}
+		.company p{color:#4a5568;line-height:1.8;font-size:0.95rem}
+		.company a{color:var(--accent);text-decoration:none;font-weight:600;transition:all 0.3s;border:1px solid var(--accent);padding:6px 12px;display:inline-block}
+		.company a:hover{color:#ffffff;background:var(--accent);text-decoration:none}
+		footer{text-align:center;padding:32px 20px;color:#a0aec0;margin-top:40px;border-top:2px solid #e2e8f0;position:relative}
+		footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+		@media (max-width:600px){.company-header{flex-direction:column;align-items:flex-start}.company-logo{width:80px;height:80px}}
+	</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="brand">Isabelle Seepersaud</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="discover.html">Discover UMD</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header class="site-head">
+		<nav>
+			<a href="index.html" class="brand">Isabelle Seepersaud</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="hobbies.html">Hobbies</a></li>
+				<li><a href="discover.html">Discover UMD</a></li>
+				<li><a href="resume.html">Resume</a></li>
+				<li><a href="career.html">Career</a></li>
+				<li><a href="game.html">Game</a></li>
+				<li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <main>
-        <section class="section">
-            <h1 class="section-title">Career Interests</h1>
-            <p>I am passionate about marketing and brand strategy. Below are companies I'm particularly interested in joining after graduation, along with specific departments and roles that align with my career goals.</p>
-        </section>
+	<main>
+		<section class="hero">
+			<h1 class="section-title" style="border-bottom:none;padding-bottom:0">Career Interests</h1>
+			<p>Companies and roles I aspire to work for — notes on why they interest me and how my skills align.</p>
+		</section>
 
-        <section class="section">
-            <div class="company-card">
-                <img src="images/general-mills-logo.png" alt="General Mills logo" class="company-logo" onerror="this.style.display='none'">
-                <div class="company-content">
-                    <h2>General Mills</h2>
-                    
-                    <h3>Departments of Interest:</h3>
-                    <ul class="department-list">
-                        <li><strong>Brand Marketing:</strong> Managing iconic brands and developing marketing campaigns</li>
-                        <li><strong>Consumer Insights:</strong> Research and analytics to understand consumer behavior</li>
-                        <li><strong>Innovation:</strong> New product development and market expansion</li>
-                        <li><strong>Social & Digital Strategy:</strong> Digital marketing and social media engagement</li>
-                    </ul>
+		<!-- General Mills -->
+		<section class="company">
+			<div class="company-header">
+				<img src="images/general-mills-logo.png" alt="General Mills logo" class="company-logo" onerror="this.style.display='none'">
+				<div>
+					<h2>General Mills</h2>
+					<p style="margin:4px 0;color:#666">Department of Interest: <strong>Brand Marketing • Consumer Insights • Innovation • Social & Digital Strategy</strong></p>
+				</div>
+			</div>
 
-                    <h3>Contact Information:</h3>
-                    <div class="contact-info">
-                        <p><strong>Headquarters:</strong><br>
-                        1 General Mills Blvd<br>
-                        Golden Valley, MN 55426</p>
-                        
-                        <p><strong>Phone:</strong> (800) 248-7310<br>
-                        <strong>Investor Relations:</strong> (763) 764-3202</p>
-                        
-                        <p><strong>Careers:</strong> <a href="https://careers.generalmills.com" target="_blank">careers.generalmills.com</a></p>
-                    </div>
+			<div class="company-info">
+				<h3>Contact Information</h3>
+				<p><strong>Corporate Headquarters:</strong><br>
+				General Mills, Inc.<br>
+				1 General Mills Blvd<br>
+				Golden Valley, MN 55426</p>
+				<p><strong>Phone:</strong> (800) 248-7310<br>
+				
+				<p><strong>Website:</strong> <a href="https://www.generalmills.com" target="_blank">www.generalmills.com</a><br>
+				</a></p>
+			</div>
 
-                    <h3>Why I'm Interested:</h3>
-                    <p>General Mills represents everything I'm passionate about in marketing - iconic brands that have shaped American culture for over 150 years. The company's commitment to innovation while honoring tradition aligns perfectly with my approach to brand management. I'm particularly drawn to their focus on purpose-driven marketing and their ability to evolve classic brands like Cheerios, Betty Crocker, and Häagen-Dazs for modern consumers.</p>
-                    
-                    <p>What excites me most is General Mills' emphasis on data-driven consumer insights combined with creative storytelling. Their recent campaigns demonstrate sophisticated understanding of diverse consumer segments while maintaining brand authenticity. The opportunity to work on brands that are household names while pioneering new market categories would be incredibly fulfilling.</p>
-                    
-                    <p>Additionally, General Mills' commitment to sustainability and social responsibility resonates with my values. Their initiatives around regenerative agriculture, packaging innovation, and community impact show how marketing can be a force for positive change. I want to contribute to marketing strategies that not only drive business results but also create meaningful societal impact.</p>
+			<div class="why-interested">
+				<h3>Why I'm Interested</h3>
+				<p>General Mills is a leader in building beloved, household brands that millions interact with every day. Their marketing philosophy is deeply rooted in consumer psychology, storytelling, and data-driven strategy, which aligns perfectly with my career goals.</p>
+				<p>I'm especially drawn to their Brand Experience, Consumer Insights, and Summer Marketing Associate roles, where I can help shape brand messaging, explore consumer behavior, and contribute to innovative campaigns across food and lifestyle categories.</p>
+				<p>The company's commitment to brand purpose, creativity, and community impact also resonates with my values and desire to work for an organization that prioritizes people and authentic storytelling.</p>
+			</div>
 
-                    <h3>Qualifications I Bring:</h3>
-                    <ul>
-                        <li>Strong foundation in marketing principles and consumer behavior through University of Minnesota Duluth coursework</li>
-                        <li>Leadership experience as Residential Advisor managing diverse student communities and organizing engagement programs</li>
-                        <li>Data analysis skills and familiarity with digital marketing tools and social media analytics platforms</li>
-                        <li>Creative problem-solving abilities demonstrated through successful event planning and community-building initiatives</li>
-                        <li>Excellent communication skills developed through public speaking, conflict resolution, and cross-cultural collaboration in campus activities</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+			<div class="qualifications">
+				<h3>My Qualifications</h3>
+				<ul>
+					<li><strong>Marketing & Consumer Insight Focus:</strong> As a BBA Marketing student, I've studied consumer behavior, analytics, and strategic marketing frameworks directly related to brand strategy at General Mills.</li>
+					<li><strong>Leadership & Communication Skills:</strong> RA role requires strong professional communication, community-building, and event planning—skills that translate well to marketing teams and cross-functional collaboration.</li>
+					<li><strong>Creative + Strategic Mindset:</strong> Experience creating videos, website content, social media posts, and promotional materials for groups such as AMA, Women in Business, and personal projects.</li>
+					<li><strong>Analytical Coursework:</strong> Business law, economics, information systems, and managerial accounting strengthen my ability to analyze data, understand markets, and think strategically.</li>
+					<li><strong>Real-World Problem Solving:</strong> Handling resident concerns, managing crises, and organizing events as an RA has prepared me to be adaptable, solutions-focused, and reliable—qualities General Mills values.</li>
+				</ul>
+			</div>
+		</section>
 
-        <section class="section">
-            <div class="company-card">
-                <img src="images/polaris-logo.png" alt="Polaris Inc. logo" class="company-logo" onerror="this.style.display='none'">
-                <div class="company-content">
-                    <h2>Polaris Inc.</h2>
-                    
-                    <h3>Departments of Interest:</h3>
-                    <ul class="department-list">
-                        <li><strong>Marketing:</strong> Brand management for powersports and off-road vehicles</li>
-                        <li><strong>Brand Management:</strong> Strategy development for motorcycle and ATV brands</li>
-                        <li><strong>Product Marketing:</strong> Go-to-market strategies for new vehicle launches</li>
-                        <li><strong>Customer Experience:</strong> Enhancing dealer and customer journey touchpoints</li>
-                    </ul>
+		<!-- Polaris Inc. -->
+		<section class="company">
+			<div class="company-header">
+				<img src="images/polaris-logo.png" alt="Polaris Inc. logo" class="company-logo" onerror="this.style.display='none'">
+				<div>
+					<h2>Polaris Inc.</h2>
+					<p style="margin:4px 0;color:#666">Department of Interest: <strong>Marketing • Brand Management • Product Marketing • Customer Experience</strong></p>
+				</div>
+			</div>
+			<div class="company-info">
+				<h3>Contact Information</h3>
+				<p><strong>Global Headquarters:</strong><br>
+				Polaris Inc.<br>
+				2100 Highway 55<br>
+				Medina, MN 55340</p>
+				<p><strong>Phone:</strong> (763) 542-0500<br>
+				
+				<p><strong>Website:</strong> <a href="https://www.polaris.com" target="_blank">www.polaris.com</a><br>
+				
+			<div class="why-interested">
+				<h3>Why I'm Interested</h3>
+				<p>Polaris is known for innovation, adventure-driven branding, and a culture that values leadership and initiative. Their internships and marketing roles allow students to work directly with product teams, brand leaders, and real consumer insights.</p>
+				<p>I'm especially excited about product marketing, customer experience, and lifestyle branding, where marketing meets real-world consumer behavior. Polaris's focus on hands-on learning and fast-paced collaboration fits my strengths and long-term goals.</p>
+			</div>
+			<div class="qualifications">
+				<h3>My Qualifications</h3>
+				<ul>
+					<li><strong>Consumer Behavior Knowledge:</strong> Marketing major with strong interest in how customers think, act, and make decisions—reinforced through coursework.</li>
+					<li><strong>Project Management Skills:</strong> From RA responsibilities (coordinating events, managing timelines, completing reports, communication with RDs) and class projects.</li>
+					<li><strong>Creative Marketing Ability:</strong> Build visuals, scripts, stories, and social content for assignments and my personal site.</li>
+					<li><strong>Team Collaboration:</strong> Experience working with leaders (RAs, RDs, club officers) and participating in group marketing projects.</li>
+					<li><strong>Strong Professional Skills:</strong> Customer service background + leadership roles developing communication, problem-solving, and adaptability.</li>
+				</ul>
+			</div>
+		</section>
 
-                    <h3>Contact Information:</h3>
-                    <div class="contact-info">
-                        <p><strong>Global Headquarters:</strong><br>
-                        2100 Highway 55<br>
-                        Medina, MN 55340</p>
-                        
-                        <p><strong>Phone:</strong> (763) 542-0500<br>
-                        <strong>Customer Experience:</strong> (800) 765-2747</p>
-                        
-                        <p><strong>Careers:</strong> <a href="https://www.polaris.com/en-us/careers/" target="_blank">polaris.com/careers</a></p>
-                    </div>
+		<section class="section" style="padding-top:0">
+			<p><a class="card-link" href="index.html">← Back to home</a></p>
+		</section>
+	</main>
 
-                    <h3>Why I'm Interested:</h3>
-                    <p>Polaris represents the perfect intersection of lifestyle marketing and experiential brand building. The company's focus on adventure, freedom, and outdoor experiences aligns with my interest in marketing that goes beyond products to sell dreams and lifestyles. Their brands like Indian Motorcycle, Ranger, and RZR have cultivated passionate communities, which is exactly the type of brand loyalty I want to help build and nurture.</p>
-                    
-                    <p>I'm particularly attracted to Polaris' approach to experiential marketing and their understanding that customers aren't just buying vehicles - they're investing in experiences, memories, and identity. The opportunity to work on marketing campaigns that celebrate adventure and outdoor lifestyle while driving technical product innovation would be incredibly rewarding for someone passionate about both creativity and strategy.</p>
-
-                    <h3>Qualifications I Bring:</h3>
-                    <ul>
-                        <li>Marketing education with focus on brand management and consumer psychology from University of Minnesota Duluth</li>
-                        <li>Community building experience through Residential Advisor role, understanding how to foster engagement and loyalty</li>
-                        <li>Event planning and experiential marketing insights gained through organizing campus activities and programs</li>
-                        <li>Understanding of digital marketing channels and social media strategies for reaching diverse demographic segments</li>
-                        <li>Strong analytical skills for measuring campaign effectiveness and consumer response across multiple touchpoints</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
-    </footer>
+	<footer>
+		&copy; 2025 Isabelle Seepersaud
+	</footer>
 </body>
 </html>

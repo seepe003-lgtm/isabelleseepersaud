@@ -1,225 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tic-Tac-Toe Game</title>
-    <link rel="stylesheet" href="../CSS/template.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #25749c;
-            color: #c0e9ff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .game-container {
-            text-align: center;
-            background-color: #1a5a7a;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .board {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 5px;
-            margin: 20px auto;
-            background-color: #0f4a6a;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        
-        .cell {
-            background-color: #87ceeb;
-            border: none;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .cell:hover {
-            background-color: #b0d4ff;
-        }
-        
-        .game-info {
-            margin: 20px 0;
-        }
-        
-        .status {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .reset-btn {
-            font-size: 1rem;
-            padding: 10px 20px;
-            background-color: #ff6b35;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .reset-btn:hover {
-            background-color: #e55a2b;
-        }
-        
-        footer {
-            background: #25749c;
-            color: #c0e9ff;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto;
-        }
-    </style>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Game — Isabelle Seepersaud</title>
+   <link rel="stylesheet" href="../CSS/styles.css">
+   <link rel="stylesheet" href="../CSS/template.css">
+   <style>
+      body {
+         background-color: #25749c !important;
+      }
+      main {
+         min-height: 80vh;
+      }
+      .game-container {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 20px;
+         text-align: center;
+      }
+
+
+      h1 {
+         margin-bottom: 20px;
+         color: #c0e9ff;
+         font-size: 3rem; /* Adjusted for visibility */
+      }
+
+
+      #message {
+         font-size: 1.2rem;
+         margin-bottom: 15px;
+         min-height: 1.5em;
+         color: #c0e9ff;
+      }
+
+
+      #game {
+         display: inline-grid;
+         grid-template-columns: repeat(3, 100px);
+         grid-template-rows: repeat(3, 100px);
+         gap: 5px;
+         margin-bottom: 20px;
+      }
+
+
+      .cell {
+         background-color: #c0e9ff;
+         border: 5px solid #2d4453;
+         font-size: 50px;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         user-select: none;
+         transition: background-color 0.3s;
+      }
+
+
+      .cell:hover {
+         background-color: #b0d9ee;
+      }
+
+
+      #resetButton {
+         padding: 10px 20px;
+         font-size: 1rem;
+         cursor: pointer;
+         border: none;
+         background-color: #2d4453;
+         color: #c0e9ff;
+         border-radius: 5px;
+         transition: background-color 0.3s;
+      }
+
+
+      #resetButton:hover {
+         background-color: #2d4453;
+      }
+   </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="brand">Isabelle Seepersaud</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="discover.html">Discover UMD</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+      <nav>
+         <a href="index.html" class="brand">Isabelle Seepersaud</a>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover UMD</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
 
-    <main>
-        <div class="game-container">
-            <h1 class="section-title">Tic-Tac-Toe Game</h1>
-            <div class="game-info">
-                <div class="status" id="status">Player 🔥's turn</div>
-                <button class="reset-btn" onclick="resetGame()">Reset Game</button>
-            </div>
-            <div class="board" id="board">
-                <button class="cell" onclick="makeMove(0)"></button>
-                <button class="cell" onclick="makeMove(1)"></button>
-                <button class="cell" onclick="makeMove(2)"></button>
-                <button class="cell" onclick="makeMove(3)"></button>
-                <button class="cell" onclick="makeMove(4)"></button>
-                <button class="cell" onclick="makeMove(5)"></button>
-                <button class="cell" onclick="makeMove(6)"></button>
-                <button class="cell" onclick="makeMove(7)"></button>
-                <button class="cell" onclick="makeMove(8)"></button>
-            </div>
-        </div>
-    </main>
+   <main>
+      <div class="game-container">
+         <h1 class="section-title" style="color:#c0e9ff;border-bottom:none;padding-bottom:0">Tic-Tac-Toe Game</h1>
+         <div id="message">Your turn!</div>
+         <div id="game">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+         </div>
+         <button id="resetButton">Restart Game</button>
+      </div>
+   </main>
 
-    <footer>
-        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
-    </footer>
+   <footer style="background:#25749c;color:#c0e9ff;border-top-color:#c0e9ff">
+      &copy; 2025 Isabelle Seepersaud. All rights reserved.
+   </footer>
 
-    <audio id="backgroundMusic" loop>
-        <source src="retro-arcade-game-music-297305.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+   <!-- Background Music -->
+   <audio id="bgMusic" loop>
+      <source src="retro-arcade-game-music-297305.mp3" type="audio/mpeg">
+   </audio>
 
-    <script>
-        let board = ['', '', '', '', '', '', '', '', ''];
-        let currentPlayer = '🔥';
-        let gameActive = true;
-        let musicStarted = false;
+   <script>
+      const gameBoard = ['', '', '', '', '', '', '', '', ''];
+      const bulldog = '🐶';  // Player
+      const bone = '🦴';     // Computer
+      let currentPlayer = bulldog;
+      let gameActive = true;
+      let autoRestartTimeout = null;
+      const bgMusic = document.getElementById('bgMusic');
+      let musicStarted = false;
 
-        const winningConditions = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8],
-            [2, 4, 6]
-        ];
+      // Start music on first user interaction
+      function startMusic() {
+         if (!musicStarted) {
+            bgMusic.volume = 0.5; // Set volume to 50%
+            bgMusic.play()
+               .then(() => console.log('Music started successfully'))
+               .catch(e => {
+                  console.error('Audio error:', e);
+                  alert('Music file not found or cannot play');
+               });
+            musicStarted = true;
+         }
+      }
 
-        function startMusic() {
-            if (!musicStarted) {
-                const music = document.getElementById('backgroundMusic');
-                music.volume = 0.5;
-                music.play().then(() => {
-                    console.log('Music started successfully');
-                    musicStarted = true;
-                }).catch((error) => {
-                    console.log('Music play failed:', error);
-                    alert('Could not play background music. Make sure the audio file retro-arcade-game-music-297305.mp3 is in the correct location.');
-                });
-            }
-        }
+      const winningConditions = [
+         [0,1,2],
+         [3,4,5],
+         [6,7,8],
+         [0,3,6],
+         [1,4,7],
+         [2,5,8],
+         [0,4,8],
+         [2,4,6]
+      ];
 
-        function makeMove(cellIndex) {
-            startMusic();
-            
-            if (board[cellIndex] !== '' || !gameActive) {
-                return;
-            }
+      const cells = document.querySelectorAll('.cell');
+      const message = document.getElementById('message');
+      const resetButton = document.getElementById('resetButton');
 
-            board[cellIndex] = currentPlayer;
-            document.getElementsByClassName('cell')[cellIndex].textContent = currentPlayer;
+      function handleCellClick(e) {
+         startMusic(); // Start music on first click
+         const index = e.target.getAttribute('data-index');
 
-            if (checkWinner()) {
-                document.getElementById('status').textContent = `Player ${currentPlayer} wins! 🎉`;
-                gameActive = false;
-                return;
-            }
 
-            if (board.every(cell => cell !== '')) {
-                document.getElementById('status').textContent = "It's a draw! 🤝";
-                gameActive = false;
-                return;
-            }
+         if (gameBoard[index] !== '' || !gameActive || currentPlayer !== bulldog) {
+            return;
+         }
 
-            currentPlayer = currentPlayer === '🔥' ? '💧' : '🔥';
-            document.getElementById('status').textContent = `Player ${currentPlayer}'s turn`;
-        }
 
-        function checkWinner() {
-            return winningConditions.some(condition => {
-                return condition.every(index => {
-                    return board[index] === currentPlayer;
-                });
-            });
-        }
+         makeMove(index, bulldog);
 
-        function resetGame() {
-            startMusic();
-            board = ['', '', '', '', '', '', '', '', ''];
-            currentPlayer = '🔥';
-            gameActive = true;
-            document.getElementById('status').textContent = "Player 🔥's turn";
-            
-            const cells = document.getElementsByClassName('cell');
-            for (let i = 0; i < cells.length; i++) {
-                cells[i].textContent = '';
-            }
-        }
-    </script>
+
+         if (!gameActive) return;
+
+
+         currentPlayer = bone;
+         message.textContent = "Computer's turn!";
+         setTimeout(computerMove, 700);
+      }
+
+
+      function makeMove(index, player) {
+         gameBoard[index] = player;
+         cells[index].textContent = player;
+
+
+         if (checkWin()) {
+            message.textContent = `${player === bulldog ? 'You ' : 'Computer '} won! 🎉`;
+            gameActive = false;
+            scheduleRestart();
+            return;
+         }
+
+
+         if (isDraw()) {
+            message.textContent = "It's a draw!";
+            gameActive = false;
+            scheduleRestart();
+            return;
+         }
+
+
+         currentPlayer = player === bulldog ? bone : bulldog;
+         if (gameActive) {
+            message.textContent = currentPlayer === bulldog ? "Your turn!" : "Computer's turn!";
+         }
+      }
+
+
+      function computerMove() {
+         if (!gameActive) return;
+
+
+         const availableIndices = gameBoard
+            .map((val, idx) => val === '' ? idx : null)
+            .filter(val => val !== null);
+
+
+         if (availableIndices.length === 0) return;
+
+
+         const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+         makeMove(randomIndex, bone);
+      }
+
+
+      function checkWin() {
+         return winningConditions.some(condition => {
+            const [a, b, c] = condition;
+            return gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[b] === gameBoard[c];
+         });
+      }
+
+
+      function isDraw() {
+         return gameBoard.every(cell => cell !== '');
+      }
+
+
+      function resetGame() {
+         clearTimeout(autoRestartTimeout);
+         for (let i = 0; i < gameBoard.length; i++) {
+            gameBoard[i] = '';
+            cells[i].textContent = '';
+         }
+         currentPlayer = bulldog;
+         gameActive = true;
+         message.textContent = `Your turn!`;
+      }
+
+
+      function scheduleRestart() {
+         autoRestartTimeout = setTimeout(() => {
+            resetGame();
+         }, 2000);
+      }
+
+
+      cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+      resetButton.addEventListener('click', () => {
+         startMusic();
+         resetGame();
+      });
+   </script>
 </body>
 </html>
 

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title - Isabelle Seepersaud</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background: #ffffff;
+            padding: 28px 40px;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .brand {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s;
+            opacity: 0.7;
+        }
+        
+        nav a:hover {
+            opacity: 1;
+        }
+        
+        .contact-btn {
+            border: 1px solid #1a1a1a;
+            padding: 10px 24px;
+            background: transparent;
+            color: #1a1a1a;
+            font-weight: 500;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            min-height: 80vh;
+            margin: 0 -40px;
+            padding: 80px 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+        
+        .hero-cta {
+            border: 2px solid #1a1a1a;
+            padding: 12px 36px;
+            background: transparent;
+            color: #1a1a1a;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .hero-cta:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        
+        .hero-image:hover img {
+            filter: grayscale(80%);
+            transform: scale(1.02);
+        }
+        
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 48px;
+            letter-spacing: -0.5px;
+            color: #1a1a1a;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+            color: #4a4a4a;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .card {
+            padding: 0;
+            border: none;
+            background: transparent;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 280px;
+            background: #f5f5f5;
+            margin-bottom: 24px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        
+        .card:hover .card-image img {
+            filter: grayscale(70%);
+            transform: scale(1.03);
+        }
+        
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        
+        .card p {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+        }
+        
+        .card-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: transform 0.3s;
+        }
+        
+        .card-link:hover {
+            transform: translateX(8px);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .content-text h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+        }
+        
+        .content-text p {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            margin-bottom: 16px;
+            line-height: 1.9;
+        }
+        
+        .content-list {
+            list-style: none;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+        }
+        
+        .content-list li {
+            padding: 8px 0;
+            line-height: 1.8;
+        }
+        
+        .content-list li::before {
+            content: '–';
+            margin-right: 12px;
+            color: #1a1a1a;
+        }
+        
+        .full-width-image {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin: 48px 0;
+            overflow: hidden;
+            background: #f5f5f5;
+            height: 400px;
+        }
+        
+        .full-width-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        
+        .cta-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 100px 0;
+            background: #fafafa;
+            margin: 80px -40px 0;
+            padding: 80px 40px;
+        }
+        
+        .cta-text h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+        
+        .cta-text p {
+            font-size: 1rem;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            border: 2px solid #1a1a1a;
+            padding: 14px 40px;
+            background: #1a1a1a;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: #1a1a1a;
+        }
+        
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                min-height: auto;
+                padding: 40px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                gap: 24px;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .cta-section {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../media/index.html" class="brand">Isabelle Seepersaud</a>
+            <ul>
+                <li><a href="../media/index.html">Home</a></li>
+                <li><a href="../media/hobbies.html">Hobbies</a></li>
+                <li><a href="../media/discover.html">Discover UMD</a></li>
+                <li><a href="../media/resume.html">Resume</a></li>
+                <li><a href="../media/career.html">Career</a></li>
+                <li><a href="../media/game.html">Game</a></li>
+                <li><button class="contact-btn">Contact Me</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Page Title Here</h1>
+                <p>This is a brief introduction to your page content. Keep it concise and engaging to set the tone for what follows.</p>
+                <a href="#" class="hero-cta">Learn More</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop" alt="Hero image">
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="section">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=280&fit=crop" alt="Project 1">
+                    </div>
+                    <h3>Project One</h3>
+                    <p>Brief description of this project or work piece. Explain the key focus or achievement.</p>
+                    <a href="#" class="card-link">VIEW PROJECT →</a>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=280&fit=crop" alt="Project 2">
+                    </div>
+                    <h3>Project Two</h3>
+                    <p>Description of the second project or accomplishment. Keep it focused and relevant.</p>
+                    <a href="#" class="card-link">VIEW PROJECT →</a>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-adf4198c868f?w=400&h=280&fit=crop" alt="Project 3">
+                    </div>
+                    <h3>Project Three</h3>
+                    <p>Your third project or work example with a concise and compelling description.</p>
+                    <a href="#" class="card-link">VIEW PROJECT →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Column Content Section -->
+        <section class="section">
+            <div class="two-col">
+                <div class="content-text">
+                    <h3>About This Section</h3>
+                    <p>Start with an engaging introduction. Explain the key points in a clear, readable format.</p>
+                    <p>Add additional context and details that support your main message. Use short, punchy paragraphs for better readability.</p>
+                    <ul class="content-list">
+                        <li>Key point or benefit one</li>
+                        <li>Important detail or feature</li>
+                        <li>Relevant information or consideration</li>
+                        <li>Concluding thought or takeaway</li>
+                    </ul>
+                </div>
+                <div class="full-width-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop" alt="Section image">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-text">
+                <h2>Ready to Connect?</h2>
+                <p>Get in touch to discuss opportunities or learn more about what I do. I'm always interested in new projects and collaborations.</p>
+                <a href="#" class="cta-button">Get In Touch</a>
+            </div>
+            <div style="background: #f0f0f0; height: 300px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
+    </footer>
+</body>
+</html>

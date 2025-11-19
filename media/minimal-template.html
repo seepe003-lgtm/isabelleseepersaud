@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title - Isabelle Seepersaud</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        :root{--accent:#2d3748;--muted:#718096;--light:#ffffff}
+        body{font-family:'Inter','Segoe UI',sans-serif;margin:0;background:#ffffff;color:#2d3748;line-height:1.6}
+        header{background:#ffffff;border-bottom:2px solid #e2e8f0;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(45,55,72,0.05)}
+        nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+        nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0}
+        nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:0.95rem;transition:all 0.3s;position:relative}
+        nav a:hover{color:var(--accent);transform:translateY(-2px)}
+        nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg, var(--accent), #e2e8f0);transition:width 0.3s}
+        nav a:hover::after{width:100%}
+        .brand a{font-size:1.4rem;font-weight:bold;color:var(--accent) !important;letter-spacing:0.5px;transition:all 0.3s}
+        .brand a:hover{transform:scale(1.05)}
+        .container{max-width:900px;margin:0 auto;padding:60px 20px}
+        .page-header{margin-bottom:48px;text-align:center;border-bottom:2px solid #e2e8f0;padding-bottom:32px;position:relative}
+        .page-header::before{content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+        .page-header h1{font-size:2.5rem;font-weight:bold;letter-spacing:-0.5px;margin:0 0 12px;color:var(--accent);line-height:1.2}
+        .page-header p{color:var(--muted);margin:0;font-size:1rem;line-height:1.7;font-weight:500}
+        .content-section{margin:48px 0;padding:32px 0;border-bottom:2px solid #e2e8f0}
+        .content-section:last-child{border-bottom:none}
+        .content-section h2{font-size:1.8rem;font-weight:bold;color:var(--accent);margin:0 0 24px;position:relative;padding-bottom:12px}
+        .content-section h2::before{content:'';position:absolute;bottom:0;left:0;width:40px;height:3px;background:linear-gradient(90deg, var(--accent), #718096);border-radius:2px}
+        .content-section p{color:#4a5568;line-height:1.9;margin:0 0 16px;font-size:0.98rem}
+        .content-section ul{color:#4a5568;line-height:1.9;margin:0 0 16px;padding-left:24px}
+        .content-section li{margin-bottom:12px;font-size:0.98rem}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:24px 0}
+        .grid-item{background:#f7fafc;padding:24px;border-radius:8px;border-left:4px solid var(--accent);transition:all 0.3s}
+        .grid-item:hover{box-shadow:0 8px 20px rgba(45,55,72,0.1);transform:translateY(-4px)}
+        .grid-item h3{color:var(--accent);font-size:1.1rem;font-weight:bold;margin:0 0 8px}
+        .grid-item p{margin:0;color:#4a5568;font-size:0.95rem}
+        .image-showcase{margin:32px 0;border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(45,55,72,0.12)}
+        .image-showcase img{width:100%;height:auto;display:block}
+        .highlight{background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);padding:32px;border-radius:8px;border-left:4px solid var(--accent);margin:32px 0}
+        .highlight h3{color:var(--accent);font-size:1.2rem;font-weight:bold;margin:0 0 12px}
+        .highlight p{margin:0;color:#4a5568;line-height:1.8}
+        .cta-button{display:inline-block;background:var(--accent);color:white;padding:12px 32px;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.3s;margin-top:16px;border:none;cursor:pointer;font-size:0.95rem}
+        .cta-button:hover{background:#1a202c;transform:translateY(-2px);box-shadow:0 8px 16px rgba(45,55,72,0.2)}
+        .breadcrumb{font-size:0.9rem;color:var(--muted);margin-bottom:32px}
+        .breadcrumb a{color:var(--accent);text-decoration:none;transition:all 0.3s}
+        .breadcrumb a:hover{text-decoration:underline}
+        footer{max-width:900px;margin:80px auto;padding:32px 20px;color:#a0aec0;font-size:0.9rem;text-align:center;border-top:2px solid #e2e8f0;position:relative}
+        footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
+        @media (max-width:600px){
+            .page-header h1{font-size:1.8rem}
+            .grid-2{grid-template-columns:1fr;gap:24px}
+            nav ul{flex-wrap:wrap;gap:16px}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand"><a href="../media/index.html" style="color:var(--accent);text-decoration:none;font-weight:700">Isabelle Seepersaud</a></div>
+            <ul>
+                <li><a href="../media/index.html">Home</a></li>
+                <li><a href="../media/hobbies.html">Hobbies</a></li>
+                <li><a href="../media/discover.html">Discover UMD</a></li>
+                <li><a href="../media/resume.html">Resume</a></li>
+                <li><a href="../media/career.html">Career</a></li>
+                <li><a href="../media/game.html">Game</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="../media/index.html">Home</a> / Page Title
+        </div>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Page Title</h1>
+            <p>A brief description of what this page is about</p>
+        </section>
+
+        <!-- Content Section 1 -->
+        <section class="content-section">
+            <h2>Introduction</h2>
+            <p>This is the opening paragraph. Use this space to introduce the main topic and give context to your visitor.</p>
+            <p>Add more details about the subject matter here. Keep the text clear and concise.</p>
+        </section>
+
+        <!-- Two Column Grid -->
+        <section class="content-section">
+            <h2>Key Points</h2>
+            <div class="grid-2">
+                <div class="grid-item">
+                    <h3>Point One</h3>
+                    <p>Description of the first key point. Highlight what makes this important or relevant.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Point Two</h3>
+                    <p>Description of the second key point. Provide context and details that matter.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Section -->
+        <section class="content-section">
+            <h2>Visual Content</h2>
+            <div class="image-showcase">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=500&fit=crop" alt="Descriptive alt text">
+            </div>
+            <p>Caption for the image. Explain what the viewer is seeing.</p>
+        </section>
+
+        <!-- Highlight Box -->
+        <section class="highlight">
+            <h3>Important Information</h3>
+            <p>Use this highlighted box for important takeaways, key facts, or essential information you want to emphasize. This creates visual hierarchy and draws attention to critical content.</p>
+        </section>
+
+        <!-- Content Section 2 -->
+        <section class="content-section">
+            <h2>Details</h2>
+            <p>Provide additional context and details here.</p>
+            <ul>
+                <li>List item one with relevant detail</li>
+                <li>List item two with relevant information</li>
+                <li>List item three highlighting a key point</li>
+                <li>List item four for completeness</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="content-section" style="text-align:center;border-bottom:none;">
+            <h2 style="text-align:center;">Ready to explore more?</h2>
+            <p>Navigation and links to related pages.</p>
+            <button class="cta-button">Next Page</button>
+            <button class="cta-button" style="background:#718096;margin-left:12px;">Back</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
+    </footer>
+</body>
+</html>
