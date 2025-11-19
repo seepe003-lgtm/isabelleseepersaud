@@ -30,7 +30,11 @@
     .content{flex:1}
     .content p{color:#4a5568;line-height:1.8;font-size:0.98rem}
     .content ul{color:#4a5568;line-height:1.9;margin:12px 0}
-    .video{max-width:720px;margin:20px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+    .video{max-width:720px;margin:20px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.06);position:relative}
+    .video video{transition:opacity 0.3s ease;border:1px solid #e2e8f0}
+    .video video:hover{box-shadow:0 8px 24px rgba(0,0,0,0.12)}
+    .video video::-webkit-media-controls-panel{background-color:rgba(255,255,255,0.95)}
+    .video video::-webkit-media-controls-play-button{background-color:#2d3748;border-radius:50%}
     footer{text-align:center;padding:32px 20px;color:#a0aec0;margin-top:40px;border-top:2px solid #e2e8f0;position:relative}
     footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:2px;background:linear-gradient(90deg, transparent, var(--accent), transparent)}
     @media(max-width:800px){.flex{flex-direction:column}.poster{flex:unset;width:100%;height:280px}}
@@ -95,11 +99,21 @@
     <section class="section">
       <h2>UMD Marketing Video (30 seconds)</h2>
       <div class="video">
-        <video controls playsinline preload="metadata" poster="images/umd.png" style="width:100%;border-radius:8px" aria-label="UMD discovery video">
+        <video 
+          controls 
+          playsinline 
+          preload="metadata" 
+          poster="images/umd.png" 
+          style="width:100%;height:auto;border-radius:8px;background:#f8f9fa" 
+          aria-label="UMD discovery video"
+          crossorigin="anonymous">
           <source src="discover.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag. <a href="discover.mp4">Download the video</a>.</p>
+          <source src="discover.webm" type="video/webm">
+          <p>Your browser does not support the video tag. <a href="discover.mp4" download>Download the video</a> to watch offline.</p>
         </video>
-        <p style="text-align:center;color:#666;margin-top:16px">Discover UMD - A video tour of campus and the Duluth area</p>
+        <p style="text-align:center;color:#666;margin-top:16px;font-size:0.9rem">
+          <strong>Discover UMD</strong> - A video showcase of campus life and the beautiful Duluth area
+        </p>
       </div>
     </section>
 
@@ -122,5 +136,41 @@
   <footer>
     <p>&copy; 2025 Isabelle Seepersaud</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('video');
+      
+      if (video) {
+        // Add loading indicator
+        video.addEventListener('loadstart', function() {
+          console.log('Video loading started');
+        });
+        
+        // Handle successful load
+        video.addEventListener('loadeddata', function() {
+          console.log('Video loaded successfully');
+          video.style.opacity = '1';
+        });
+        
+        // Handle video errors
+        video.addEventListener('error', function(e) {
+          console.log('Video error:', e);
+          const errorMsg = document.createElement('div');
+          errorMsg.style.cssText = 'background:#f8d7da;color:#721c24;padding:16px;border-radius:8px;text-align:center;margin:16px 0';
+          errorMsg.innerHTML = `
+            <strong>Video Unavailable</strong><br>
+            <small>The discover.mp4 video file may be corrupted or in an unsupported format. 
+            <a href="discover.mp4" download style="color:#721c24;text-decoration:underline">Try downloading</a> to view offline.</small>
+          `;
+          video.parentNode.insertBefore(errorMsg, video.nextSibling);
+        });
+        
+        // Set initial opacity for smooth loading
+        video.style.transition = 'opacity 0.3s';
+        video.style.opacity = '0.7';
+      }
+    });
+  </script>
 </body>
 </html>
