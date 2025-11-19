@@ -1,0 +1,22 @@
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #7C2D12 0%, #DC2626 50%, #FCD34D 100%)"&gt;
+  &lt;!-- University building silhouette --&gt;
+  &lt;rect x="120" y="180" width="160" height="80" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="140" y="160" width="20" height="100" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="180" y="160" width="20" height="100" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="220" y="160" width="20" height="100" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="260" y="160" width="20" height="100" fill="#8B4513" opacity="0.9"/&gt;
+  
+  &lt;!-- Main tower --&gt;
+  &lt;rect x="180" y="120" width="40" height="140" fill="#654321" opacity="0.9"/&gt;
+  &lt;polygon points="180,120 200,100 220,120" fill="#8B0000"/&gt;
+  
+  &lt;!-- Windows --&gt;
+  &lt;rect x="145" y="170" width="10" height="15" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="185" y="170" width="10" height="15" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="225" y="170" width="10" height="15" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="265" y="170" width="10" height="15" fill="#FFF8DC" opacity="0.8"/&gt;
+  
+  &lt;!-- UMD Text --&gt;
+  &lt;text x="200" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="36" font-weight="bold"&gt;UMD&lt;/text&gt;
+  &lt;text x="200" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold"&gt;University of Minnesota Duluth&lt;/text&gt;
+&lt;/svg&gt;

@@ -1,0 +1,32 @@
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #7C2D12 0%, #DC2626 50%, #FCD34D 100%)"&gt;
+  &lt;!-- Lake Superior water --&gt;
+  &lt;ellipse cx="200" cy="220" rx="180" ry="60" fill="#1e40af" opacity="0.8"/&gt;
+  &lt;ellipse cx="200" cy="210" rx="160" ry="40" fill="#3b82f6" opacity="0.6"/&gt;
+  &lt;ellipse cx="200" cy="200" rx="140" ry="25" fill="#60a5fa" opacity="0.4"/&gt;
+  
+  &lt;!-- Mountains/hills silhouette --&gt;
+  &lt;path d="M 0 180 Q 80 160 160 170 Q 240 160 320 170 Q 360 165 400 170 L 400 300 L 0 300 Z" fill="#374151" opacity="0.7"/&gt;
+  &lt;path d="M 0 190 Q 60 175 120 180 Q 200 170 280 180 Q 340 175 400 180 L 400 300 L 0 300 Z" fill="#4b5563" opacity="0.5"/&gt;
+  
+  &lt;!-- Trees --&gt;
+  &lt;polygon points="80,180 85,160 90,180" fill="#065f46"/&gt;
+  &lt;polygon points="150,185 158,165 166,185" fill="#047857"/&gt;
+  &lt;polygon points="250,175 260,155 270,175" fill="#065f46"/&gt;
+  &lt;polygon points="320,185 330,165 340,185" fill="#047857"/&gt;
+  
+  &lt;!-- Lighthouse --&gt;
+  &lt;rect x="295" y="140" width="8" height="40" fill="#dc2626"/&gt;
+  &lt;rect x="292" y="135" width="14" height="8" fill="white"/&gt;
+  &lt;circle cx="299" cy="131" r="3" fill="#fbbf24"/&gt;
+  
+  &lt;!-- Sun/sky --&gt;
+  &lt;circle cx="320" cy="80" r="25" fill="#fbbf24" opacity="0.8"/&gt;
+  &lt;path d="M 300 60 L 305 75" stroke="#fbbf24" stroke-width="2"/&gt;
+  &lt;path d="M 340 60 L 335 75" stroke="#fbbf24" stroke-width="2"/&gt;
+  &lt;path d="M 345 100 L 330 105" stroke="#fbbf24" stroke-width="2"/&gt;
+  &lt;path d="M 275 100 L 290 105" stroke="#fbbf24" stroke-width="2"/&gt;
+  
+  &lt;!-- Text --&gt;
+  &lt;text x="200" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold"&gt;DULUTH&lt;/text&gt;
+  &lt;text x="200" y="70" text-anchor="middle" fill="#fde047" font-family="Arial, sans-serif" font-size="14"&gt;Lake Superior's North Shore&lt;/text&gt;
+&lt;/svg&gt;

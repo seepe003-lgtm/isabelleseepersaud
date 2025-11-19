@@ -1,0 +1,29 @@
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #e879f9 0%, #a855f7 50%, #3b82f6 100%)"&gt;
+  &lt;!-- Professional woman silhouette --&gt;
+  &lt;circle cx="200" cy="120" r="40" fill="#8B4513" opacity="0.8"/&gt;
+  &lt;ellipse cx="200" cy="200" rx="50" ry="60" fill="#1f2937" opacity="0.8"/&gt;
+  
+  &lt;!-- Hair --&gt;
+  &lt;path d="M 160 100 Q 200 80 240 100 Q 240 120 220 140 Q 200 130 180 140 Q 160 120 160 100" fill="#4A5568" opacity="0.9"/&gt;
+  
+  &lt;!-- Face details --&gt;
+  &lt;circle cx="190" cy="115" r="2" fill="#2d3748"/&gt;
+  &lt;circle cx="210" cy="115" r="2" fill="#2d3748"/&gt;
+  &lt;path d="M 195 125 Q 200 130 205 125" stroke="#2d3748" stroke-width="1" fill="none"/&gt;
+  
+  &lt;!-- Business attire details --&gt;
+  &lt;rect x="180" y="170" width="40" height="5" fill="white" opacity="0.9"/&gt;
+  
+  &lt;!-- Briefcase --&gt;
+  &lt;rect x="120" y="200" width="30" height="20" rx="2" fill="#4A5568" opacity="0.8"/&gt;
+  &lt;rect x="125" y="203" width="20" height="3" fill="#718096"/&gt;
+  
+  &lt;!-- Success symbols --&gt;
+  &lt;text x="80" y="80" font-size="20" fill="#fbbf24"&gt;★&lt;/text&gt;
+  &lt;text x="320" y="90" font-size="18" fill="#fde047"&gt;★&lt;/text&gt;
+  &lt;text x="90" y="250" font-size="16" fill="#facc15"&gt;★&lt;/text&gt;
+  &lt;text x="330" y="260" font-size="19" fill="#fbbf24"&gt;★&lt;/text&gt;
+  
+  &lt;!-- Text --&gt;
+  &lt;text x="200" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold"&gt;WOMEN IN BUSINESS&lt;/text&gt;
+&lt;/svg&gt;

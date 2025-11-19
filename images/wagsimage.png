@@ -1,0 +1,26 @@
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #ff9a8b 0%, #fecfef 50%, #fecfef 100%)"&gt;
+  &lt;!-- Dog silhouette --&gt;
+  &lt;ellipse cx="200" cy="180" rx="80" ry="40" fill="#8B4513" opacity="0.8"/&gt;
+  &lt;circle cx="170" cy="140" r="35" fill="#8B4513" opacity="0.8"/&gt;
+  &lt;circle cx="230" cy="140" r="35" fill="#8B4513" opacity="0.8"/&gt;
+  &lt;ellipse cx="200" cy="120" rx="45" ry="35" fill="#8B4513" opacity="0.8"/&gt;
+  
+  &lt;!-- Eyes --&gt;
+  &lt;circle cx="185" cy="115" r="4" fill="white"/&gt;
+  &lt;circle cx="215" cy="115" r="4" fill="white"/&gt;
+  &lt;circle cx="185" cy="115" r="2" fill="black"/&gt;
+  &lt;circle cx="215" cy="115" r="2" fill="black"/&gt;
+  
+  &lt;!-- Nose --&gt;
+  &lt;ellipse cx="200" cy="125" rx="3" ry="2" fill="black"/&gt;
+  
+  &lt;!-- Heart symbols floating around --&gt;
+  &lt;text x="100" y="80" font-size="24" fill="#FF69B4"&gt;♥&lt;/text&gt;
+  &lt;text x="320" y="100" font-size="20" fill="#FF1493"&gt;♥&lt;/text&gt;
+  &lt;text x="80" y="200" font-size="18" fill="#FFB6C1"&gt;♥&lt;/text&gt;
+  &lt;text x="340" y="220" font-size="22" fill="#FF69B4"&gt;♥&lt;/text&gt;
+  
+  &lt;!-- Text --&gt;
+  &lt;text x="200" y="260" text-anchor="middle" fill="#8B4513" font-family="Arial, sans-serif" font-size="18" font-weight="bold"&gt;WAGS &amp; WHISKERS&lt;/text&gt;
+  &lt;text x="200" y="280" text-anchor="middle" fill="#8B4513" font-family="Arial, sans-serif" font-size="14"&gt;Animal Rescue&lt;/text&gt;
+&lt;/svg&gt;

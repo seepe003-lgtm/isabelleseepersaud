@@ -1,0 +1,39 @@
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: linear-gradient(135deg, #7C2D12 0%, #DC2626 50%, #FCD34D 100%)"&gt;
+  &lt;!-- Campus buildings --&gt;
+  &lt;rect x="50" y="160" width="80" height="100" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="150" y="140" width="60" height="120" fill="#654321" opacity="0.9"/&gt;
+  &lt;rect x="230" y="150" width="70" height="110" fill="#8B4513" opacity="0.9"/&gt;
+  &lt;rect x="320" y="170" width="50" height="90" fill="#654321" opacity="0.9"/&gt;
+  
+  &lt;!-- Main building with tower --&gt;
+  &lt;rect x="150" y="100" width="60" height="160" fill="#654321" opacity="0.9"/&gt;
+  &lt;polygon points="150,100 180,80 210,100" fill="#8B0000"/&gt;
+  &lt;rect x="175" y="85" width="10" height="15" fill="#FFF8DC"/&gt;
+  
+  &lt;!-- Windows --&gt;
+  &lt;rect x="60" y="170" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="75" y="170" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="90" y="170" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="105" y="170" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  
+  &lt;rect x="160" y="150" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="175" y="150" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="190" y="150" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  
+  &lt;rect x="240" y="160" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="255" y="160" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  &lt;rect x="270" y="160" width="8" height="12" fill="#FFF8DC" opacity="0.8"/&gt;
+  
+  &lt;!-- Trees and landscaping --&gt;
+  &lt;circle cx="40" cy="200" r="15" fill="#065f46" opacity="0.8"/&gt;
+  &lt;circle cx="380" cy="210" r="12" fill="#047857" opacity="0.8"/&gt;
+  &lt;circle cx="130" cy="220" r="10" fill="#065f46" opacity="0.8"/&gt;
+  &lt;circle cx="280" cy="230" r="14" fill="#047857" opacity="0.8"/&gt;
+  
+  &lt;!-- Pathways --&gt;
+  &lt;path d="M 0 250 Q 100 240 200 250 Q 300 240 400 250" stroke="#a0aec0" stroke-width="3" fill="none" opacity="0.6"/&gt;
+  
+  &lt;!-- UMD text --&gt;
+  &lt;text x="200" y="60" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold"&gt;UMD&lt;/text&gt;
+  &lt;text x="200" y="80" text-anchor="middle" fill="#fde047" font-family="Arial, sans-serif" font-size="12"&gt;University of Minnesota Duluth&lt;/text&gt;
+&lt;/svg&gt;
