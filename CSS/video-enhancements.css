@@ -1,0 +1,26 @@
+/* Enhanced Video Styling for Discover Page */
+.video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.video:hover {
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18) !important;
+    transform: translateY(-2px);
+}
+
+.video video {
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transition: all 0.4s ease;
+}
+
+/* Video Loading Animation */
+@keyframes videoSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -30,8 +30,8 @@
     .content{flex:1}
     .content p{color:#4a5568;line-height:1.8;font-size:0.98rem}
     .content ul{color:#4a5568;line-height:1.9;margin:12px 0}
-    .video{max-width:720px;margin:20px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.06);position:relative}
-    .video video{transition:opacity 0.3s ease;border:1px solid #e2e8f0}
+    .video{max-width:720px;margin:20px 0;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.12);position:relative;transition:all 0.3s ease}
+    .video:hover{box-shadow:0 12px 32px rgba(0,0,0,0.18);transform:translateY(-2px)}\n    .video video{transition:all 0.4s ease;border:1px solid #e2e8f0;border-radius:8px;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%)}
     .video video:hover{box-shadow:0 8px 24px rgba(0,0,0,0.12)}
     .video video::-webkit-media-controls-panel{background-color:rgba(255,255,255,0.95)}
     .video video::-webkit-media-controls-play-button{background-color:#2d3748;border-radius:50%}
@@ -66,7 +66,7 @@
       <h2>Why I chose University of Minnesota Duluth</h2>
       <div class="flex">
         <div class="poster">
-          <img src="images/umd.png" alt="UMD campus" loading="lazy" onerror="this.src='images/mypic.svg'; this.alt='Campus image unavailable'">
+          <img src="images/University-of-Minnesota-Duluth-Aerial-of-Campus-October-2022.webp" alt="UMD campus" loading="lazy" onerror="this.src='images/mypic.svg'; this.alt='Campus image unavailable'">
         </div>
         <div class="content">
           <p>I chose UMD because of its strong programs in business,, the smaller campus community that supports meaningful faculty connections, and opportunities for hands-on projects and internships. The balance between strong academics and a welcoming campus culture made it the right fit for me.</p>
@@ -104,12 +104,15 @@
           playsinline 
           preload="metadata" 
           poster="images/umd.png" 
-          style="width:100%;height:auto;border-radius:8px;background:#f8f9fa" 
-          aria-label="UMD discovery video"
-          crossorigin="anonymous">
-          <source src="discover.mp4" type="video/mp4">
-          <source src="discover.webm" type="video/webm">
-          <p>Your browser does not support the video tag. <a href="discover.mp4" download>Download the video</a> to watch offline.</p>
+          style="width:100%;height:auto;border-radius:8px;background:#f8f9fa;box-shadow:0 4px 12px rgba(0,0,0,0.1);cursor:pointer" 
+          aria-label="UMD discovery video showcasing campus life and Duluth area (click to remove)"
+          crossorigin="anonymous"
+          muted
+          onclick="this.parentElement.style.display='none'">
+          <source src="images/discover.mp4" type="video/mp4">
+          <p>Your browser does not support the video tag. 
+            <a href="images/discover.mp4" download style="color:#2d3748;text-decoration:underline;font-weight:600">Download the video</a> to watch offline.
+          </p>
         </video>
         <p style="text-align:center;color:#666;margin-top:16px;font-size:0.9rem">
           <strong>Discover UMD</strong> - A video showcase of campus life and the beautiful Duluth area
@@ -142,28 +145,125 @@
       const video = document.querySelector('video');
       
       if (video) {
-        // Add loading indicator
+        // Add enhanced loading indicator
         video.addEventListener('loadstart', function() {
           console.log('Video loading started');
+          
+          // Create loading overlay
+          const loadingOverlay = document.createElement('div');
+          loadingOverlay.id = 'video-loading';
+          loadingOverlay.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(45, 55, 72, 0.9);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(4px);
+            z-index: 10;
+          `;
+          
+          loadingOverlay.innerHTML = `
+            <div style="width:20px;height:20px;border:2px solid #fff;border-top:2px solid transparent;border-radius:50%;animation:spin 1s linear infinite"></div>
+            Loading video...
+          `;
+          
+          video.parentNode.style.position = 'relative';
+          video.parentNode.appendChild(loadingOverlay);
         });
         
-        // Handle successful load
+        // Handle successful load with smooth reveal
         video.addEventListener('loadeddata', function() {
           console.log('Video loaded successfully');
+          
+          // Remove loading overlay
+          const loadingOverlay = document.getElementById('video-loading');
+          if (loadingOverlay) {
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => loadingOverlay.remove(), 300);
+          }
+          
+          // Smooth video reveal
           video.style.opacity = '1';
+          video.style.transform = 'scale(1)';
+          
+          // Add success indicator briefly
+          const successMsg = document.createElement('div');
+          successMsg.style.cssText = `
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 5;
+            opacity: 0;
+            transition: opacity 0.3s;
+          `;
+          successMsg.textContent = '✅ Video Ready';
+          
+          video.parentNode.appendChild(successMsg);
+          
+          setTimeout(() => {
+            successMsg.style.opacity = '1';
+            setTimeout(() => {
+              successMsg.style.opacity = '0';
+              setTimeout(() => successMsg.remove(), 300);
+            }, 2000);
+          }, 100);
         });
         
-        // Handle video errors
+        // Handle video errors with enhanced feedback
         video.addEventListener('error', function(e) {
           console.log('Video error:', e);
-          const errorMsg = document.createElement('div');
-          errorMsg.style.cssText = 'background:#f8d7da;color:#721c24;padding:16px;border-radius:8px;text-align:center;margin:16px 0';
-          errorMsg.innerHTML = `
-            <strong>Video Unavailable</strong><br>
-            <small>The discover.mp4 video file may be corrupted or in an unsupported format. 
-            <a href="discover.mp4" download style="color:#721c24;text-decoration:underline">Try downloading</a> to view offline.</small>
+          video.style.display = 'none';
+          
+          const errorContainer = document.createElement('div');
+          errorContainer.style.cssText = `
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            color: #721c24;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 16px 0;
+            border-left: 4px solid #dc3545;
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
           `;
-          video.parentNode.insertBefore(errorMsg, video.nextSibling);
+          
+          errorContainer.innerHTML = `
+            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">📹 Video Currently Unavailable</div>
+            <div style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 16px;">
+              The UMD discover video is temporarily inaccessible. This may be due to:
+              <ul style="text-align: left; max-width: 400px; margin: 8px auto; padding-left: 20px;">
+                <li>File format compatibility issues</li>
+                <li>Network connectivity problems</li>
+                <li>Browser video codec limitations</li>
+              </ul>
+            </div>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+              <a href="images/discover.mp4" download 
+                 style="background:#dc3545;color:white;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.9rem;display:inline-block;transition:all 0.3s"
+                 onclick="setTimeout(() => this.style.display='none', 100)">
+                📥 Download Video
+              </a>
+              <button onclick="this.parentElement.parentElement.style.display='none'" 
+                      style="background:#dc3545;color:white;padding:8px 16px;border-radius:6px;border:none;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.3s"
+                      title="Click to remove this error message">
+                ❌ Remove
+              </button>
+            </div>
+          `;
+          
+          video.parentNode.insertBefore(errorContainer, video.nextSibling);
         });
         
         // Set initial opacity for smooth loading
