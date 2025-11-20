@@ -83,11 +83,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preload critical images
     const criticalImages = [
         'images/IMG_4250.JPG',
-        'images/mypic.svg'
+        'images/mypic.svg',
+        'images/general-mills-logo.png',
+        'images/polaris-logo.png',
+        'images/wagsimage.png'
     ];
     
     criticalImages.forEach(src => {
         const img = new Image();
         img.src = src;
+    });
+    
+    // Add smooth loading animation for company logos
+    document.querySelectorAll('.company-logo').forEach(logo => {
+        logo.style.transform = 'scale(0.95)';
+        logo.style.transition = 'all 0.3s ease';
+        
+        logo.addEventListener('load', function() {
+            this.style.transform = 'scale(1)';
+            this.style.opacity = '1';
+        });
     });
 });

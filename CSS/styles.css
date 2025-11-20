@@ -610,6 +610,14 @@ img.error-fallback {
     opacity: 0.8;
     filter: grayscale(15%);
     border: 1px dashed #e2e8f0;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 8px;
+}
+
+.company-logo.error-fallback {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
 }
 
 /* Image Loading States */
