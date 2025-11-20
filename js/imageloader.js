@@ -104,4 +104,33 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.opacity = '1';
         });
     });
+    
+    // Enhanced card image handling
+    document.querySelectorAll('.card-image img').forEach((img, index) => {
+        // Add staggered loading animation
+        img.style.animationDelay = `${index * 0.1}s`;
+        
+        // Handle successful loads with smooth reveal
+        img.addEventListener('load', function() {
+            setTimeout(() => {
+                this.classList.add('loaded');
+                this.style.opacity = '1';
+            }, index * 100);
+        });
+        
+        // Enhanced error handling for hobby images
+        img.addEventListener('error', function() {
+            console.log(`Hobby image failed to load: ${this.src}`);
+            this.classList.add('error-fallback');
+            
+            // Add visual feedback for error state
+            this.style.opacity = '0.8';
+            this.style.transform = 'scale(0.95)';
+            
+            // Try alternative if not already using fallback
+            if (!this.src.includes('mypic.svg')) {
+                this.src = this.src.replace(/[^/]*$/, 'mypic.svg');
+            }
+        });
+    });
 });
