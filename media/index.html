@@ -77,11 +77,20 @@
         <!-- Portrait + Intro -->
         <section class="portrait-section" aria-labelledby="welcome-heading">
             <div class="headshot">
-                <picture>
-                    <source srcset="images/IMG_4250.JPG" type="image/jpeg">
-                    <img src="images/IMG_4250.JPG" alt="Headshot of Isabelle Seepersaud" class="portrait-circle" loading="lazy" onerror="this.src='images/mypic.svg'; this.alt='Portrait unavailable'">
+                <picture class="portrait-picture">
+                    <source srcset="images/IMG_4250.JPG 1x, images/IMG_4250.JPG 2x" type="image/jpeg" media="(min-width: 768px)">
+                    <source srcset="images/IMG_4250.JPG 1x" type="image/jpeg" media="(max-width: 767px)">
+                    <img src="images/IMG_4250.JPG" 
+                         alt="Professional headshot of Isabelle Seepersaud, Business Marketing student at University of Minnesota Duluth" 
+                         class="portrait-circle" 
+                         loading="eager" 
+                         decoding="async"
+                         width="280" 
+                         height="280"
+                         onerror="this.src='images/mypic.svg'; this.alt='Portrait unavailable'; this.classList.add('error-fallback')"
+                         onload="this.classList.add('loaded')">
                 </picture>
-                <figcaption style="color:#666;font-size:0.9rem;margin-top:8px">Isabelle Seepersaud</figcaption>
+                <figcaption class="portrait-caption">Isabelle Seepersaud<br><small>Business Marketing Student</small></figcaption>
             </div>
 
             <div class="portrait-text">
@@ -92,10 +101,20 @@
 
         <!-- Welcome video (30-60s placeholder) -->
         <div class="section" style="padding-top:40px;padding-bottom:40px">
-            <video controls poster="images/IMG_4250.JPG" style="width:100%;max-width:720px;border-radius:8px;display:block;margin:12px auto" aria-label="Welcome video">
-                <source src="welcome.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="video-container">
+                <video controls 
+                       poster="images/WIN_20251120_19_20_21_Pro.mp4" 
+                       class="welcome-video"
+                       preload="metadata"
+                       aria-label="Welcome video introduction by Isabelle Seepersaud">
+                    <source src="images/WIN_20251120_19_20_21_Pro.mp4" type="video/mp4">
+                    <source src="welcome.webm" type="video/webm">
+                    <p class="video-fallback">
+                        Your browser does not support the video tag. 
+                        <a href="welcome.mp4" download>Download the video</a> to watch offline.
+                    </p>
+                </video>
+            </div>
             <p style="text-align:center;color:#666;margin-top:16px">Welcome to my portfolio! Upload your video as <code>welcome.mp4</code> to replace this placeholder.</p>
         </div>
 
@@ -104,7 +123,18 @@
             <article class="hobby">
                 <a href="hobbies.html">
                     <div class="hobby-image">
-                        <img src="images/wags.png" alt="Wags & Whiskers Animal Rescue of Minnesota logo featuring a smiling dog and cat with a pink heart between them" loading="lazy" onerror="this.src='images/mypic.svg'; this.alt='Organization logo unavailable'">
+                        <picture>
+                            <source srcset="images/wags.png 1x" type="image/png">
+                            <img src="images/wags.png" 
+                                 alt="Wags & Whiskers Animal Rescue logo - Supporting animal welfare through fostering rescue dogs and community volunteer work" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="200" 
+                                 height="200"
+                                 style="object-fit: contain; padding: 8px;"
+                                 onerror="this.src='images/mypic.svg'; this.alt='Animal rescue image unavailable'; this.classList.add('error-fallback')"
+                                 onload="this.classList.add('loaded')">
+                        </picture>
                     </div>
                 </a>
                 <h3><a href="hobbies.html" style="text-decoration:none;color:inherit">Fostering Rescue Dogs</a></h3>
@@ -115,7 +145,18 @@
             <article class="hobby">
                 <a href="hobbies.html">
                     <div class="hobby-image">
-                        <img src="images/woman.jpg" alt="Woman in business" loading="lazy" onerror="this.src='images/mypic.svg'; this.alt='Business image unavailable'">
+                        <picture>
+                            <source srcset="images/woman.jpg 1x" type="image/jpeg">
+                            <img src="images/woman.jpg" 
+                                 alt="Professional businesswoman - Representing women's leadership development and career empowerment initiatives" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="200" 
+                                 height="200"
+                                 style="object-fit: cover; border-radius: 4px;"
+                                 onerror="this.src='images/mypic.svg'; this.alt='Business leadership image unavailable'; this.classList.add('error-fallback')"
+                                 onload="this.classList.add('loaded')">
+                        </picture>
                     </div>
                 </a>
                 <h3><a href="hobbies.html" style="text-decoration:none;color:inherit">Woman in business</a></h3>
