@@ -3,28 +3,21 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Tic Tac Toe Game — Isabelle Seepersaud</title>
-   <link rel="stylesheet" href="../CSS/styles.css">
+   <title>(Your Name)'s Game Page</title>
+
+
+   <!-- Import Comfortaa font from Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="CSS/template.css">
+
 
    <style>
-      :root{--accent:#2d3748;--muted:#718096}
       body {
-         font-family: 'Inter','Segoe UI',sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #ffffff;
-         display: flex;
-         flex-direction: column;
-         min-height: 100vh;
+         background-color: #25749c !important;
       }
-      header{background:#ffffff;border-bottom:1px solid #e2e8f0}
-      nav{max-width:900px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;width:100%;box-sizing:border-box}
-      nav ul {list-style:none;display:flex;gap:32px;margin:0;padding:0}
-      nav ul li a {color:var(--muted);text-decoration:none;font-weight:500;font-size:0.95rem;transition:color 0.2s;display:inline}
-      nav ul li a:hover {color:var(--accent)}
-      .brand a{color:var(--accent);text-decoration:none;font-weight:700}
-
-
+      main {
+         min-height: 80vh;
+      }
       .game-container {
          flex: 1;
          display: flex;
@@ -35,17 +28,19 @@
          text-align: center;
       }
 
+
       h1 {
          margin-bottom: 20px;
-         color: var(--accent);
-         font-size: 3rem;
+         color: #c0e9ff;
+         font-size: 3rem; /* Adjusted for visibility */
       }
+
 
       #message {
          font-size: 1.2rem;
          margin-bottom: 15px;
          min-height: 1.5em;
-         color: var(--accent);
+         color: #c0e9ff;
       }
 
 
@@ -59,8 +54,8 @@
 
 
       .cell {
-         background-color: #f0f4f8;
-         border: 2px solid #e2e8f0;
+         background-color: #c0e9ff;
+         border: 5px solid #2d4453;
          font-size: 50px;
          cursor: pointer;
          display: flex;
@@ -70,8 +65,9 @@
          transition: background-color 0.3s;
       }
 
+
       .cell:hover {
-         background-color: #e2e8f0;
+         background-color: #b0d9ee;
       }
 
 
@@ -80,47 +76,61 @@
          font-size: 1rem;
          cursor: pointer;
          border: none;
-         background-color: var(--accent);
-         color: #ffffff;
+         background-color: #2d4453;
+         color: #c0e9ff;
          border-radius: 5px;
          transition: background-color 0.3s;
       }
 
+
       #resetButton:hover {
-         background-color: #1a365d;
+         background-color: #2d4453;
       }
    </style>
 </head>
 <body>
-   <nav>
-       <ul>
-           <li><a href="index.html">Home</a></li>
-           <li><a href="hobbies.html">Hobbies</a></li>
-           <li><a href="discover.html">Discover UMD</a></li>
-           <li><a href="resume.html">Resume</a></li>
-           <li><a href="career.html">Career</a></li>
-           <li><a href="game.html">Game</a></li>
-       </ul>
-   </nav>
+   <header>
+      <nav>
+         <a href="index.html" class="brand">Isabelle Seepersaud</a>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover UMD</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a class="contact-btn" href="mailto:isabelle4seepersaud@gmail.com">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
 
-
-   <div class="game-container">
-      <h1>This is the Game Page</h1>
-      <div id="message">Your turn!</div>
-      <div id="game">
-         <div class="cell" data-index="0"></div>
-         <div class="cell" data-index="1"></div>
-         <div class="cell" data-index="2"></div>
-         <div class="cell" data-index="3"></div>
-         <div class="cell" data-index="4"></div>
-         <div class="cell" data-index="5"></div>
-         <div class="cell" data-index="6"></div>
-         <div class="cell" data-index="7"></div>
-         <div class="cell" data-index="8"></div>
+   <main>
+      <div class="game-container">
+         <h1 class="section-title" style="color:#c0e9ff;border-bottom:none;padding-bottom:0">Tic-Tac-Toe Game</h1>
+         <div id="message">Your turn!</div>
+         <div id="game">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+         </div>
+         <button id="resetButton">Restart Game</button>
       </div>
-      <button id="resetButton">Restart Game</button>
-   </div>
+   </main>
 
+   <footer style="background:#25749c;color:#c0e9ff;border-top-color:#c0e9ff">
+      &copy; 2025 Isabelle Seepersaud. All rights reserved.
+   </footer>
+
+   <!-- Background Music -->
+   <audio id="bgMusic" loop>
+      <source src="retro-arcade-game-music-297305.mp3" type="audio/mpeg">
+   </audio>
 
    <script>
       const gameBoard = ['', '', '', '', '', '', '', '', ''];
@@ -129,7 +139,22 @@
       let currentPlayer = bulldog;
       let gameActive = true;
       let autoRestartTimeout = null;
+      const bgMusic = document.getElementById('bgMusic');
+      let musicStarted = false;
 
+      // Start music on first user interaction
+      function startMusic() {
+         if (!musicStarted) {
+            bgMusic.volume = 0.5; // Set volume to 50%
+            bgMusic.play()
+               .then(() => console.log('Music started successfully'))
+               .catch(e => {
+                  console.error('Audio error:', e);
+                  alert('Music file not found or cannot play');
+               });
+            musicStarted = true;
+         }
+      }
 
       const winningConditions = [
          [0,1,2],
@@ -142,13 +167,12 @@
          [2,4,6]
       ];
 
-
       const cells = document.querySelectorAll('.cell');
       const message = document.getElementById('message');
       const resetButton = document.getElementById('resetButton');
 
-
       function handleCellClick(e) {
+         startMusic(); // Start music on first click
          const index = e.target.getAttribute('data-index');
 
 
@@ -247,7 +271,13 @@
 
 
       cells.forEach(cell => cell.addEventListener('click', handleCellClick));
-      resetButton.addEventListener('click', resetGame);
+      resetButton.addEventListener('click', () => {
+         startMusic();
+         resetGame();
+      });
    </script>
 </body>
 </html>
+
+
+

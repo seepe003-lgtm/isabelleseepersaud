@@ -1,0 +1,374 @@
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #ffffff;
+color: #1a1a1a;
+line-height: 1.8;
+}
+
+header {
+background: #ffffff;
+padding: 28px 60px;
+border-bottom: none;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+max-width: 1400px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.brand {
+font-size: 1.2rem;
+font-weight: 700;
+letter-spacing: 0.3px;
+color: #1a1a1a;
+text-decoration: none;
+transition: opacity 0.3s;
+}
+
+.brand:hover {
+opacity: 0.7;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 50px;
+align-items: center;
+}
+
+nav a {
+text-decoration: none;
+color: #1a1a1a;
+font-size: 0.9rem;
+font-weight: 400;
+letter-spacing: 0.3px;
+transition: all 0.3s;
+opacity: 0.7;
+}
+
+nav a:hover {
+opacity: 1;
+}
+
+.contact-btn {
+border: 1.5px solid #1a1a1a;
+padding: 10px 28px;
+background: transparent;
+color: #1a1a1a;
+font-weight: 500;
+cursor: pointer;
+letter-spacing: 0.3px;
+font-size: 0.85rem;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-block;
+}
+
+.contact-btn:hover {
+background: #1a1a1a;
+color: #ffffff;
+}
+
+main {
+max-width: 100%;
+margin: 0;
+padding: 0;
+}
+
+/* ===== HERO WITH OVERLAY ===== */
+.hero-overlay {
+position: relative;
+height: 80vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+.hero-background {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+z-index: 0;
+}
+
+.hero-background img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: grayscale(50%);
+}
+
+.hero-content-box {
+position: relative;
+z-index: 2;
+max-width: 500px;
+margin-left: 80px;
+background: rgba(255, 255, 255, 0.98);
+padding: 60px 50px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content-box h1 {
+font-size: 3.2rem;
+font-weight: 300;
+letter-spacing: -0.8px;
+margin-bottom: 20px;
+line-height: 1.1;
+color: #1a1a1a;
+}
+
+.hero-content-box p {
+font-size: 0.95rem;
+line-height: 1.8;
+color: #4a4a4a;
+margin-bottom: 32px;
+}
+
+.read-more-btn {
+border: 1.5px solid #1a1a1a;
+padding: 12px 32px;
+background: transparent;
+color: #1a1a1a;
+font-weight: 600;
+cursor: pointer;
+letter-spacing: 0.5px;
+font-size: 0.85rem;
+transition: all 0.3s;
+display: inline-block;
+text-decoration: none;
+}
+
+.read-more-btn:hover {
+background: #1a1a1a;
+color: #ffffff;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+padding: 100px 80px;
+border-bottom: 1px solid #e8e8e8;
+}
+
+.section:last-child {
+border-bottom: none;
+}
+
+/* ===== TWO COLUMN LAYOUT ===== */
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: start;
+}
+
+.left-col h2 {
+font-size: 2.8rem;
+font-weight: 300;
+margin-bottom: 10px;
+letter-spacing: -0.6px;
+color: #1a1a1a;
+}
+
+.left-col .subtitle {
+font-size: 1rem;
+color: #666;
+margin-bottom: 20px;
+}
+
+.right-col h3 {
+font-size: 1.5rem;
+font-weight: 400;
+margin-bottom: 20px;
+color: #1a1a1a;
+}
+
+.right-col p {
+font-size: 0.95rem;
+line-height: 1.9;
+color: #4a4a4a;
+margin-bottom: 20px;
+}
+
+.experience-item {
+margin-bottom: 40px;
+}
+
+.experience-item h3 {
+font-size: 1.8rem;
+font-weight: 300;
+margin-bottom: 10px;
+}
+
+.experience-item .role {
+font-size: 1.1rem;
+font-weight: 500;
+margin-bottom: 15px;
+color: #1a1a1a;
+}
+
+.experience-item p {
+color: #4a4a4a;
+line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+padding: 50px 80px;
+text-align: center;
+color: #8a8a8a;
+font-size: 0.85rem;
+border-top: 1px solid #e8e8e8;
+letter-spacing: 0.3px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+.two-col {
+grid-template-columns: 1fr;
+gap: 50px;
+}
+
+.section {
+padding: 60px 50px;
+}
+
+.hero-content-box {
+margin-left: 40px;
+padding: 40px 40px;
+}
+}
+
+@media (max-width: 768px) {
+header {
+padding: 20px 24px;
+}
+
+nav ul {
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.hero-overlay {
+height: 60vh;
+align-items: flex-end;
+}
+
+.hero-content-box {
+margin: 0 24px 40px 24px;
+padding: 32px;
+}
+
+.section {
+padding: 40px 24px;
+}
+
+.contact-btn {
+display: none;
+}
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">Isabelle Seepersaud</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="discover.html">Discover UMD</a></li>
+                <li><a href="files/final resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="mailto:isabelle4seepersaud@gmail.com" class="contact-btn">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO WITH OVERLAY ===== -->
+        <section class="hero-overlay">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop"
+                    alt="Background">
+            </div>
+            <div class="hero-content-box">
+                <h1>Isabelle Seepersaud</h1>
+                <p>Welcome to my portfolio. I specialize in marketing strategy, brand development, and experiential
+                    marketing. I'm passionate about creating meaningful connections between brands and audiences.</p>
+                <a href="#about" class="read-more-btn">Read More</a>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="section">
+            <div class="two-col">
+                <div class="left-col">
+                    <h2>About Me</h2>
+                </div>
+                <div class="right-col">
+                    <h3>My Vision</h3>
+                    <p>As an experienced marketing student, I have a solid background in brand strategy, consumer
+                        behavior, and digital engagement. I have successfully completed projects in various areas,
+                        including event planning, social media management, and market research.</p>
+                    <p>My goal is to deliver high-performing and user-friendly marketing solutions that exceed
+                        expectations. I believe in the power of authentic storytelling to build lasting relationships
+                        between brands and their communities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE SECTION ===== -->
+        <section class="section">
+            <div class="two-col">
+                <div class="left-col">
+                    <h2>Experience</h2>
+                    <p class="subtitle">Work History</p>
+                </div>
+                <div class="right-col">
+                    <div class="experience-item">
+                        <h3>Senior Marketing Student</h3>
+                        <p class="role">2024 - Present</p>
+                        <p>Focusing on capstone projects and real-world marketing applications. Serving as a Residential
+                            Advisor and leading campus marketing initiatives. Developing comprehensive strategies for
+                            local businesses.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Marketing Intern</h3>
+                        <p class="role">2023 - 2024</p>
+                        <p>Supported marketing campaigns and brand development projects. Gained hands-on experience in
+                            event planning and social media strategy. Collaborated with cross-functional teams to
+                            execute promotional events.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Campus Involvement Lead</h3>
+                        <p class="role">2022 - 2023</p>
+                        <p>Organized and executed campus events and marketing initiatives. Developed communication
+                            strategies for student engagement. Managed budgets and coordinated with vendors for
+                            large-scale events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Isabelle Seepersaud. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
